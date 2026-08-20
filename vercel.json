@@ -1,10 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/paket/:slug", "destination": "/paket-detail.html?slug=:slug" },
-    { "source": "/paket-detail/:slug", "destination": "/paket-detail.html?slug=:slug" },
-    { "source": "/paket-detail", "destination": "/paket-detail.html" }
+  "routes": [
+    { "src": "/paket/(?<slug>[^/]+)", "dest": "/paket-detail.html?slug=$slug" },
+    { "src": "/paket-detail/(?<slug>[^/]+)", "dest": "/paket-detail.html?slug=$slug" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
