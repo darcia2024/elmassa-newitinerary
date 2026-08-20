@@ -1,17 +1,14 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "src": "^/paket-november2026/?$", "dest": "/paket-detail.html?slug=november" },
-    { "src": "^/paket-november/?$", "dest": "/paket-detail.html?slug=november" },
-    { "src": "^/paket-hanan-attaki/?$", "dest": "/paket-detail.html?slug=hanan-attaki" },
-    { "src": "^/paket-hananattaki/?$", "dest": "/paket-detail.html?slug=hanan-attaki" },
-    { "src": "^/paket-akhir-tahun/?$", "dest": "/paket-detail.html?slug=akhir-tahun" },
-    { "src": "^/paket-akhirtahun/?$", "dest": "/paket-detail.html?slug=akhir-tahun" },
-    { "src": "^/paket-(?<slug>[^/]+)/?$", "dest": "/paket-detail.html?slug=$slug" },
-    { "src": "^/paket/(?<slug>[^/]+)/?$", "dest": "/paket-detail.html?slug=$slug" },
-    { "src": "^/paket-detail/(?<slug>[^/]+)/?$", "dest": "/paket-detail.html?slug=$slug" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/$1" }
+  "rewrites": [
+    { "source": "/paket-november2026", "destination": "/paket-detail.html?slug=november" },
+    { "source": "/paket-november", "destination": "/paket-detail.html?slug=november" },
+    { "source": "/paket-hanan-attaki", "destination": "/paket-detail.html?slug=hanan-attaki" },
+    { "source": "/paket-hananattaki", "destination": "/paket-detail.html?slug=hanan-attaki" },
+    { "source": "/paket-akhir-tahun", "destination": "/paket-detail.html?slug=akhir-tahun" },
+    { "source": "/paket-akhirtahun", "destination": "/paket-detail.html?slug=akhir-tahun" },
+    { "source": "/paket-desember", "destination": "/paket-detail.html?slug=akhir-tahun" },
+    { "source": "/paket-:slug", "destination": "/paket-detail.html?slug=:slug" },
+    { "source": "/paket/:slug", "destination": "/paket-detail.html?slug=:slug" }
   ]
 }
