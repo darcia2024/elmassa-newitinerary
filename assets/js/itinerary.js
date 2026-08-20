@@ -1,12 +1,13 @@
 /**
  * EL MASSA TOUR & TRAVEL - OFFICIAL 10 PACKAGES CATALOG ENGINE
- * Clean, Badge-Free Editorial Design with Locked States for Unreleased Packages
+ * Clean, Badge-Free Editorial Design with Standardized Slugs & Locked States
  */
 
-// Official 10 Packages Catalog Database
+// Official 10 Packages Catalog Database with Standardized Slugs
 const PACKAGES_DATA = [
   {
-    id: "umrah-special-november",
+    id: "umrah-special-november-2026",
+    slug: "umrah-special-november-2026",
     title: "Umrah Special November 2026 (10 Hari Tanpa Transit)",
     shortTitle: "Umrah Special November",
     category: "direct",
@@ -22,7 +23,8 @@ const PACKAGES_DATA = [
     bonus: "Free City Tour Thaif & Pabrik Parfum + Bimbingan Sunnah"
   },
   {
-    id: "umrah-hanan-attaki",
+    id: "umrah-spesial-ustadz-hanan-attaki",
+    slug: "umrah-spesial-ustadz-hanan-attaki",
     title: "Umrah Special Bersama Ustadz Hanan Attaki",
     shortTitle: "Umrah Ust. Hanan Attaki",
     category: "ustadz",
@@ -38,7 +40,8 @@ const PACKAGES_DATA = [
     bonus: "Kajian Eksklusif Tematik di Madinah & Makkah + Free Thaif + D'Prima Transit"
   },
   {
-    id: "umrah-akhir-tahun",
+    id: "umrah-nyaman-akhir-tahun-desember-2026",
+    slug: "umrah-nyaman-akhir-tahun-desember-2026",
     title: "Umrah Nyaman Akhir Tahun (Program 9 Hari)",
     shortTitle: "Umrah Nyaman Akhir Tahun",
     category: "akhir-tahun",
@@ -54,7 +57,8 @@ const PACKAGES_DATA = [
     bonus: "Free City Tour Thaif + D'Prima Hotel Transit PP + Air Zamzam 5L"
   },
   {
-    id: "umrah-nisfu-syaban",
+    id: "umrah-nisfu-syaban-januari-2026",
+    slug: "umrah-nisfu-syaban-januari-2026",
     title: "Umrah Nisfu Sya'ban di Makkah (9 Hari)",
     shortTitle: "Umrah Nisfu Sya'ban",
     category: "syaban",
@@ -70,7 +74,8 @@ const PACKAGES_DATA = [
     bonus: "Ibadah Malam Nisfu Sya'ban di Depan Ka'bah + Free City Tour Thaif"
   },
   {
-    id: "umrah-awal-ramadan",
+    id: "umrah-awal-ramadan-2027",
+    slug: "umrah-awal-ramadan-2027",
     title: "Umrah Istimewa Awal Ramadan di Makkah (9 Hari)",
     shortTitle: "Umrah Awal Ramadan",
     category: "ramadan",
@@ -86,7 +91,8 @@ const PACKAGES_DATA = [
     bonus: "Pahala Umrah Setara Ibadah Haji Bersama Nabi SAW + Free Thaif"
   },
   {
-    id: "umrah-sayang-orang-tua",
+    id: "umrah-sayang-orang-tua-syawal-2027",
+    slug: "umrah-sayang-orang-tua-syawal-2027",
     title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
     shortTitle: "Umrah Sayang Orang Tua",
     category: "syawal",
@@ -102,7 +108,8 @@ const PACKAGES_DATA = [
     bonus: "Akses Super Dekat Khusus Lansia & Kursi Roda + Free City Tour Thaif"
   },
   {
-    id: "umrah-nyaman-syawal",
+    id: "umrah-nyaman-syawal-2027",
+    slug: "umrah-nyaman-syawal-2027",
     title: "Umrah Lebih Nyaman Syawal (Program 9 & 12 Hari)",
     shortTitle: "Umrah Nyaman Syawal",
     category: "syawal",
@@ -118,7 +125,8 @@ const PACKAGES_DATA = [
     bonus: "Suasana Hari Raya Syawal di Depan Ka'bah + Free City Tour Thaif"
   },
   {
-    id: "umrah-muharram-awal-musim",
+    id: "umrah-muharram-awal-musim-1449h",
+    slug: "umrah-muharram-awal-musim-1449h",
     title: "Umrah Muharram Awal Musim Baru 1449 H",
     shortTitle: "Umrah Muharram Awal Musim",
     category: "awal-musim",
@@ -134,7 +142,8 @@ const PACKAGES_DATA = [
     bonus: "Pembukaan Musim Baru Umrah 1449 H yang Tenang & Khusyuk + Free Thaif"
   },
   {
-    id: "umrah-liburan-sekolah-9h",
+    id: "umrah-liburan-sekolah-9-hari",
+    slug: "umrah-liburan-sekolah-9-hari",
     title: "Umrah Liburan Sekolah (Program 9 Hari)",
     shortTitle: "Umrah Liburan Sekolah 9 Hari",
     category: "liburan",
@@ -150,7 +159,8 @@ const PACKAGES_DATA = [
     bonus: "Program Edukasi Sejarah Islam untuk Anak & Remaja + Free City Tour Thaif"
   },
   {
-    id: "umrah-liburan-sekolah-12h",
+    id: "umrah-liburan-sekolah-12-hari",
+    slug: "umrah-liburan-sekolah-12-hari",
     title: "Umrah Liburan Sekolah (Program 12 Hari Lengkap)",
     shortTitle: "Umrah Liburan Sekolah 12 Hari",
     category: "liburan",
@@ -246,9 +256,9 @@ function renderPackageCards(packages) {
         </div>
       `;
     } else {
-      // Unlocked Official Card (Clickable, Direct Link to Detail Page)
+      // Unlocked Official Card (Clickable, Direct Link to Detail Page using clean slug)
       html += `
-        <a href="paket-detail.html?id=${pkg.id}" class="elm-white-card p-4 sm:p-5 flex flex-col justify-between group transition-all duration-300 block select-none">
+        <a href="paket-detail.html?slug=${pkg.slug}" class="elm-white-card p-4 sm:p-5 flex flex-col justify-between group transition-all duration-300 block select-none">
           
           <div>
             <!-- Clean Poster -->
@@ -347,6 +357,7 @@ function setupLiveSearch() {
       return (
         pkg.title.toLowerCase().includes(q) ||
         pkg.shortTitle.toLowerCase().includes(q) ||
+        pkg.slug.toLowerCase().includes(q) ||
         pkg.airline.toLowerCase().includes(q) ||
         pkg.departure.toLowerCase().includes(q) ||
         pkg.hotelMakkah.toLowerCase().includes(q) ||
