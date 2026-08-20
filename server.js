@@ -24,25 +24,39 @@ function createServer(port) {
     let reqPath = req.url.split('?')[0];
     if (reqPath === '/') reqPath = '/index.html';
 
-    const safePath = path.normalize(decodeURIComponent(reqPath)).replace(/^(\.\.[\/\\])+/, '');
-    const filePath = path.join(PUBLIC_DIR, safePath);
+    // Support clean rewrite for /paket-* or /paket/*
+    if (reqPath.startsWith('/paket-') || reqPath.startsWith('/paket/')) {
+      reqPath = '/paket-detail.html';
+    }
+
+    let safePath = path.normalize(decodeURIComponent(reqPath)).replace(/^(\.\.[\/\\])+/, '');
+    let filePath = path.join(PUBLIC_DIR, safePath);
 
     fs.stat(filePath, (err, stats) => {
-      if (err || !stats.isFile()) {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('404 Not Found');
-        return;
+      if ((err || !stats.isFile()) && !path.extname(filePath)) {
+        // Try with .html extension
+        if (fs.existsSync(filePath + '.html')) {
+          filePath = filePath + '.html';
+        }
       }
 
-      const ext = path.extname(filePath).toLowerCase();
-      const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+      fs.stat(filePath, (err2, stats2) => {
+        if (err2 || !stats2.isFile()) {
+          res.writeHead(404, { 'Content-Type': 'text/plain' });
+          res.end('404 Not Found');
+          return;
+        }
 
-      res.writeHead(200, {
-        'Content-Type': contentType,
-        'Access-Control-Allow-Origin': '*'
+        const ext = path.extname(filePath).toLowerCase();
+        const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+
+        res.writeHead(200, {
+          'Content-Type': contentType,
+          'Access-Control-Allow-Origin': '*'
+        });
+
+        fs.createReadStream(filePath).pipe(res);
       });
-
-      fs.createReadStream(filePath).pipe(res);
     });
   });
 

@@ -2,8 +2,15 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
-    { "src": "/paket/(?<slug>[^/]+)", "dest": "/paket-detail.html?slug=$slug" },
-    { "src": "/paket-detail/(?<slug>[^/]+)", "dest": "/paket-detail.html?slug=$slug" },
+    { "src": "^/paket-november2026/?$", "dest": "/paket-detail.html?slug=november" },
+    { "src": "^/paket-november/?$", "dest": "/paket-detail.html?slug=november" },
+    { "src": "^/paket-hanan-attaki/?$", "dest": "/paket-detail.html?slug=hanan-attaki" },
+    { "src": "^/paket-hananattaki/?$", "dest": "/paket-detail.html?slug=hanan-attaki" },
+    { "src": "^/paket-akhir-tahun/?$", "dest": "/paket-detail.html?slug=akhir-tahun" },
+    { "src": "^/paket-akhirtahun/?$", "dest": "/paket-detail.html?slug=akhir-tahun" },
+    { "src": "^/paket-(?<slug>[^/]+)/?$", "dest": "/paket-detail.html?slug=$slug" },
+    { "src": "^/paket/(?<slug>[^/]+)/?$", "dest": "/paket-detail.html?slug=$slug" },
+    { "src": "^/paket-detail/(?<slug>[^/]+)/?$", "dest": "/paket-detail.html?slug=$slug" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/$1" }
   ]

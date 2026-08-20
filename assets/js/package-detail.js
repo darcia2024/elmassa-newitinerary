@@ -432,27 +432,42 @@ const ALL_PACKAGES = {
   }
 };
 
-// Aliases mapping for backward compatibility
+// Aliases mapping for backward compatibility and clean root URLs
 const SLUG_ALIASES = {
+  "paket-november2026": "november",
+  "paket-november": "november",
+  "november2026": "november",
   "umrah-special-november-2026": "november",
   "umrah-special-november": "november",
+  "paket-hanan-attaki": "hanan-attaki",
+  "paket-hananattaki": "hanan-attaki",
   "umrah-spesial-ustadz-hanan-attaki": "hanan-attaki",
   "umrah-hanan-attaki": "hanan-attaki",
+  "paket-akhir-tahun": "akhir-tahun",
+  "paket-akhirtahun": "akhir-tahun",
+  "paket-desember": "akhir-tahun",
   "umrah-nyaman-akhir-tahun-desember-2026": "akhir-tahun",
   "umrah-akhir-tahun": "akhir-tahun",
   "desember": "akhir-tahun",
+  "paket-nisfu-syaban": "nisfu-syaban",
   "umrah-nisfu-syaban-januari-2026": "nisfu-syaban",
   "umrah-nisfu-syaban": "nisfu-syaban",
+  "paket-ramadan": "ramadan",
   "umrah-awal-ramadan-2027": "ramadan",
   "umrah-awal-ramadan": "ramadan",
+  "paket-orang-tua": "orang-tua",
   "umrah-sayang-orang-tua-syawal-2027": "orang-tua",
   "umrah-sayang-orang-tua": "orang-tua",
+  "paket-syawal": "syawal",
   "umrah-nyaman-syawal-2027": "syawal",
   "umrah-nyaman-syawal": "syawal",
+  "paket-muharram": "muharram",
   "umrah-muharram-awal-musim-1449h": "muharram",
   "umrah-muharram-awal-musim": "muharram",
+  "paket-liburan-9h": "liburan-9h",
   "umrah-liburan-sekolah-9-hari": "liburan-9h",
   "umrah-liburan-sekolah-9h": "liburan-9h",
+  "paket-liburan-12h": "liburan-12h",
   "umrah-liburan-sekolah-12-hari": "liburan-12h",
   "umrah-liburan-sekolah-12h": "liburan-12h"
 };
@@ -470,7 +485,7 @@ function getActivePackageFromURL() {
   const params = new URLSearchParams(window.location.search);
   let rawSlug = params.get('slug') || params.get('id');
 
-  // Also support pathname extraction e.g. /paket/november
+  // Also support pathname extraction e.g. /paket-november2026, /paket-november, /paket/november
   if (!rawSlug) {
     const pathParts = window.location.pathname.split('/').filter(Boolean);
     const lastPart = pathParts[pathParts.length - 1];
@@ -479,8 +494,11 @@ function getActivePackageFromURL() {
     }
   }
 
+  // Normalize slug
+  let normalizedSlug = rawSlug ? rawSlug.toLowerCase().trim() : '';
+
   // Resolve alias if any
-  const resolvedSlug = SLUG_ALIASES[rawSlug] || rawSlug;
+  const resolvedSlug = SLUG_ALIASES[normalizedSlug] || normalizedSlug;
   const pkg = ALL_PACKAGES[resolvedSlug] || ALL_PACKAGES["november"];
 
   // If locked, redirect to catalog section
