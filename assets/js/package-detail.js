@@ -182,9 +182,9 @@ function createTailoredItinerary(pkgName, daysCount, madinahNights, makkahNights
 // Comprehensive 10 Packages Database
 const ALL_PACKAGES = {
   // 1. UMRAH SPECIAL NOVEMBER 2026
-  "umrah-special-november-2026": {
-    id: "umrah-special-november-2026",
-    slug: "umrah-special-november-2026",
+  "november": {
+    id: "november",
+    slug: "november",
     title: "Umrah Special November 2026 (10 Hari Tanpa Transit)",
     shortTitle: "Umrah Special November",
     category: "direct",
@@ -207,9 +207,9 @@ const ALL_PACKAGES = {
   },
 
   // 2. UMRAH SPECIAL BERSAMA USTADZ HANAN ATTAKI
-  "umrah-spesial-ustadz-hanan-attaki": {
-    id: "umrah-spesial-ustadz-hanan-attaki",
-    slug: "umrah-spesial-ustadz-hanan-attaki",
+  "hanan-attaki": {
+    id: "hanan-attaki",
+    slug: "hanan-attaki",
     title: "Umrah Special Bersama Ustadz Hanan Attaki",
     shortTitle: "Umrah Ust. Hanan Attaki",
     category: "ustadz",
@@ -232,9 +232,9 @@ const ALL_PACKAGES = {
   },
 
   // 3. UMRAH NYAMAN AKHIR TAHUN
-  "umrah-nyaman-akhir-tahun-desember-2026": {
-    id: "umrah-nyaman-akhir-tahun-desember-2026",
-    slug: "umrah-nyaman-akhir-tahun-desember-2026",
+  "akhir-tahun": {
+    id: "akhir-tahun",
+    slug: "akhir-tahun",
     title: "Umrah Nyaman Akhir Tahun (Program 9 Hari)",
     shortTitle: "Umrah Nyaman Akhir Tahun",
     category: "akhir-tahun",
@@ -257,9 +257,9 @@ const ALL_PACKAGES = {
   },
 
   // 4. UMRAH NISFU SYA'BAN DI MEKKAH
-  "umrah-nisfu-syaban-januari-2026": {
-    id: "umrah-nisfu-syaban-januari-2026",
-    slug: "umrah-nisfu-syaban-januari-2026",
+  "nisfu-syaban": {
+    id: "nisfu-syaban",
+    slug: "nisfu-syaban",
     title: "Umrah Nisfu Sya'ban di Makkah (9 Hari)",
     shortTitle: "Umrah Nisfu Sya'ban",
     category: "syaban",
@@ -282,9 +282,9 @@ const ALL_PACKAGES = {
   },
 
   // 5. UMRAH AWAL RAMADAN
-  "umrah-awal-ramadan-2027": {
-    id: "umrah-awal-ramadan-2027",
-    slug: "umrah-awal-ramadan-2027",
+  "ramadan": {
+    id: "ramadan",
+    slug: "ramadan",
     title: "Umrah Istimewa Awal Ramadan di Makkah (9 Hari)",
     shortTitle: "Umrah Awal Ramadan",
     category: "ramadan",
@@ -307,9 +307,9 @@ const ALL_PACKAGES = {
   },
 
   // 6. UMRAH SAYANG ORANG TUA
-  "umrah-sayang-orang-tua-syawal-2027": {
-    id: "umrah-sayang-orang-tua-syawal-2027",
-    slug: "umrah-sayang-orang-tua-syawal-2027",
+  "orang-tua": {
+    id: "orang-tua",
+    slug: "orang-tua",
     title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
     shortTitle: "Umrah Sayang Orang Tua",
     category: "syawal",
@@ -332,9 +332,9 @@ const ALL_PACKAGES = {
   },
 
   // 7. UMRAH NYAMAN SYAWAL
-  "umrah-nyaman-syawal-2027": {
-    id: "umrah-nyaman-syawal-2027",
-    slug: "umrah-nyaman-syawal-2027",
+  "syawal": {
+    id: "syawal",
+    slug: "syawal",
     title: "Umrah Lebih Nyaman Syawal (Program 9 & 12 Hari)",
     shortTitle: "Umrah Nyaman Syawal",
     category: "syawal",
@@ -357,9 +357,9 @@ const ALL_PACKAGES = {
   },
 
   // 8. UMRAH MUHARRAM AWAL MUSIM BARU
-  "umrah-muharram-awal-musim-1449h": {
-    id: "umrah-muharram-awal-musim-1449h",
-    slug: "umrah-muharram-awal-musim-1449h",
+  "muharram": {
+    id: "muharram",
+    slug: "muharram",
     title: "Umrah Muharram Awal Musim Baru 1449 H",
     shortTitle: "Umrah Muharram Awal Musim",
     category: "awal-musim",
@@ -382,9 +382,9 @@ const ALL_PACKAGES = {
   },
 
   // 9. UMRAH LIBURAN SEKOLAH (9 HARI)
-  "umrah-liburan-sekolah-9-hari": {
-    id: "umrah-liburan-sekolah-9-hari",
-    slug: "umrah-liburan-sekolah-9-hari",
+  "liburan-9h": {
+    id: "liburan-9h",
+    slug: "liburan-9h",
     title: "Umrah Liburan Sekolah (Program 9 Hari)",
     shortTitle: "Umrah Liburan Sekolah 9 Hari",
     category: "liburan",
@@ -407,9 +407,9 @@ const ALL_PACKAGES = {
   },
 
   // 10. UMRAH LIBURAN SEKOLAH (12 HARI)
-  "umrah-liburan-sekolah-12-hari": {
-    id: "umrah-liburan-sekolah-12-hari",
-    slug: "umrah-liburan-sekolah-12-hari",
+  "liburan-12h": {
+    id: "liburan-12h",
+    slug: "liburan-12h",
     title: "Umrah Liburan Sekolah (Program 12 Hari Lengkap)",
     shortTitle: "Umrah Liburan Sekolah 12 Hari",
     category: "liburan",
@@ -434,18 +434,27 @@ const ALL_PACKAGES = {
 
 // Aliases mapping for backward compatibility
 const SLUG_ALIASES = {
-  "umrah-special-november": "umrah-special-november-2026",
-  "umrah-hanan-attaki": "umrah-spesial-ustadz-hanan-attaki",
-  "umrah-akhir-tahun": "umrah-nyaman-akhir-tahun-desember-2026",
-  "umrah-desember": "umrah-nyaman-akhir-tahun-desember-2026",
-  "umrah-nisfu-syaban": "umrah-nisfu-syaban-januari-2026",
-  "umrah-awal-ramadan": "umrah-awal-ramadan-2027",
-  "umrah-sayang-orang-tua": "umrah-sayang-orang-tua-syawal-2027",
-  "umrah-nyaman-syawal": "umrah-nyaman-syawal-2027",
-  "umrah-muharram-awal-musim": "umrah-muharram-awal-musim-1449h",
-  "umrah-muharram": "umrah-muharram-awal-musim-1449h",
-  "umrah-liburan-sekolah-9h": "umrah-liburan-sekolah-9-hari",
-  "umrah-liburan-sekolah-12h": "umrah-liburan-sekolah-12-hari"
+  "umrah-special-november-2026": "november",
+  "umrah-special-november": "november",
+  "umrah-spesial-ustadz-hanan-attaki": "hanan-attaki",
+  "umrah-hanan-attaki": "hanan-attaki",
+  "umrah-nyaman-akhir-tahun-desember-2026": "akhir-tahun",
+  "umrah-akhir-tahun": "akhir-tahun",
+  "desember": "akhir-tahun",
+  "umrah-nisfu-syaban-januari-2026": "nisfu-syaban",
+  "umrah-nisfu-syaban": "nisfu-syaban",
+  "umrah-awal-ramadan-2027": "ramadan",
+  "umrah-awal-ramadan": "ramadan",
+  "umrah-sayang-orang-tua-syawal-2027": "orang-tua",
+  "umrah-sayang-orang-tua": "orang-tua",
+  "umrah-nyaman-syawal-2027": "syawal",
+  "umrah-nyaman-syawal": "syawal",
+  "umrah-muharram-awal-musim-1449h": "muharram",
+  "umrah-muharram-awal-musim": "muharram",
+  "umrah-liburan-sekolah-9-hari": "liburan-9h",
+  "umrah-liburan-sekolah-9h": "liburan-9h",
+  "umrah-liburan-sekolah-12-hari": "liburan-12h",
+  "umrah-liburan-sekolah-12h": "liburan-12h"
 };
 
 // Populate aliases in ALL_PACKAGES
@@ -461,7 +470,7 @@ function getActivePackageFromURL() {
   const params = new URLSearchParams(window.location.search);
   let rawSlug = params.get('slug') || params.get('id');
 
-  // Also support pathname extraction e.g. /paket/umrah-special-november-2026
+  // Also support pathname extraction e.g. /paket/november
   if (!rawSlug) {
     const pathParts = window.location.pathname.split('/').filter(Boolean);
     const lastPart = pathParts[pathParts.length - 1];
@@ -472,12 +481,12 @@ function getActivePackageFromURL() {
 
   // Resolve alias if any
   const resolvedSlug = SLUG_ALIASES[rawSlug] || rawSlug;
-  const pkg = ALL_PACKAGES[resolvedSlug] || ALL_PACKAGES["umrah-special-november-2026"];
+  const pkg = ALL_PACKAGES[resolvedSlug] || ALL_PACKAGES["november"];
 
   // If locked, redirect to catalog section
   if (pkg && pkg.isLocked) {
     window.location.href = "index.html#katalog-section";
-    return ALL_PACKAGES["umrah-special-november-2026"];
+    return ALL_PACKAGES["november"];
   }
 
   return pkg;

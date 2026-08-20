@@ -1,13 +1,13 @@
 /**
  * EL MASSA TOUR & TRAVEL - OFFICIAL 10 PACKAGES CATALOG ENGINE
- * Clean, Badge-Free Editorial Design with Standardized Slugs & Locked States
+ * Simple, Clean Slugs & Editorial Design
  */
 
-// Official 10 Packages Catalog Database with Standardized Slugs
+// Official 10 Packages Catalog Database with Super Simple Slugs
 const PACKAGES_DATA = [
   {
-    id: "umrah-special-november-2026",
-    slug: "umrah-special-november-2026",
+    id: "november",
+    slug: "november",
     title: "Umrah Special November 2026 (10 Hari Tanpa Transit)",
     shortTitle: "Umrah Special November",
     category: "direct",
@@ -23,8 +23,8 @@ const PACKAGES_DATA = [
     bonus: "Free City Tour Thaif & Pabrik Parfum + Bimbingan Sunnah"
   },
   {
-    id: "umrah-spesial-ustadz-hanan-attaki",
-    slug: "umrah-spesial-ustadz-hanan-attaki",
+    id: "hanan-attaki",
+    slug: "hanan-attaki",
     title: "Umrah Special Bersama Ustadz Hanan Attaki",
     shortTitle: "Umrah Ust. Hanan Attaki",
     category: "ustadz",
@@ -40,8 +40,8 @@ const PACKAGES_DATA = [
     bonus: "Kajian Eksklusif Tematik di Madinah & Makkah + Free Thaif + D'Prima Transit"
   },
   {
-    id: "umrah-nyaman-akhir-tahun-desember-2026",
-    slug: "umrah-nyaman-akhir-tahun-desember-2026",
+    id: "akhir-tahun",
+    slug: "akhir-tahun",
     title: "Umrah Nyaman Akhir Tahun (Program 9 Hari)",
     shortTitle: "Umrah Nyaman Akhir Tahun",
     category: "akhir-tahun",
@@ -57,8 +57,8 @@ const PACKAGES_DATA = [
     bonus: "Free City Tour Thaif + D'Prima Hotel Transit PP + Air Zamzam 5L"
   },
   {
-    id: "umrah-nisfu-syaban-januari-2026",
-    slug: "umrah-nisfu-syaban-januari-2026",
+    id: "nisfu-syaban",
+    slug: "nisfu-syaban",
     title: "Umrah Nisfu Sya'ban di Makkah (9 Hari)",
     shortTitle: "Umrah Nisfu Sya'ban",
     category: "syaban",
@@ -74,8 +74,8 @@ const PACKAGES_DATA = [
     bonus: "Ibadah Malam Nisfu Sya'ban di Depan Ka'bah + Free City Tour Thaif"
   },
   {
-    id: "umrah-awal-ramadan-2027",
-    slug: "umrah-awal-ramadan-2027",
+    id: "ramadan",
+    slug: "ramadan",
     title: "Umrah Istimewa Awal Ramadan di Makkah (9 Hari)",
     shortTitle: "Umrah Awal Ramadan",
     category: "ramadan",
@@ -91,8 +91,8 @@ const PACKAGES_DATA = [
     bonus: "Pahala Umrah Setara Ibadah Haji Bersama Nabi SAW + Free Thaif"
   },
   {
-    id: "umrah-sayang-orang-tua-syawal-2027",
-    slug: "umrah-sayang-orang-tua-syawal-2027",
+    id: "orang-tua",
+    slug: "orang-tua",
     title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
     shortTitle: "Umrah Sayang Orang Tua",
     category: "syawal",
@@ -108,8 +108,8 @@ const PACKAGES_DATA = [
     bonus: "Akses Super Dekat Khusus Lansia & Kursi Roda + Free City Tour Thaif"
   },
   {
-    id: "umrah-nyaman-syawal-2027",
-    slug: "umrah-nyaman-syawal-2027",
+    id: "syawal",
+    slug: "syawal",
     title: "Umrah Lebih Nyaman Syawal (Program 9 & 12 Hari)",
     shortTitle: "Umrah Nyaman Syawal",
     category: "syawal",
@@ -125,8 +125,8 @@ const PACKAGES_DATA = [
     bonus: "Suasana Hari Raya Syawal di Depan Ka'bah + Free City Tour Thaif"
   },
   {
-    id: "umrah-muharram-awal-musim-1449h",
-    slug: "umrah-muharram-awal-musim-1449h",
+    id: "muharram",
+    slug: "muharram",
     title: "Umrah Muharram Awal Musim Baru 1449 H",
     shortTitle: "Umrah Muharram Awal Musim",
     category: "awal-musim",
@@ -142,8 +142,8 @@ const PACKAGES_DATA = [
     bonus: "Pembukaan Musim Baru Umrah 1449 H yang Tenang & Khusyuk + Free Thaif"
   },
   {
-    id: "umrah-liburan-sekolah-9-hari",
-    slug: "umrah-liburan-sekolah-9-hari",
+    id: "liburan-9h",
+    slug: "liburan-9h",
     title: "Umrah Liburan Sekolah (Program 9 Hari)",
     shortTitle: "Umrah Liburan Sekolah 9 Hari",
     category: "liburan",
@@ -159,8 +159,8 @@ const PACKAGES_DATA = [
     bonus: "Program Edukasi Sejarah Islam untuk Anak & Remaja + Free City Tour Thaif"
   },
   {
-    id: "umrah-liburan-sekolah-12-hari",
-    slug: "umrah-liburan-sekolah-12-hari",
+    id: "liburan-12h",
+    slug: "liburan-12h",
     title: "Umrah Liburan Sekolah (Program 12 Hari Lengkap)",
     shortTitle: "Umrah Liburan Sekolah 12 Hari",
     category: "liburan",
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Render Main Package Cards (Unlocked vs Locked State)
+// Render Main Package Cards
 function renderPackageCards(packages) {
   const container = document.getElementById("packages-grid-container");
   if (!container) return;
@@ -210,28 +210,24 @@ function renderPackageCards(packages) {
   let html = '';
   packages.forEach((pkg) => {
     if (pkg.isLocked) {
-      // Locked Card (Not Clickable, Clean Disabled State)
+      // Locked Card
       html += `
         <div class="elm-white-card p-4 sm:p-5 flex flex-col justify-between select-none opacity-90 border border-[#f0e8eb] cursor-default">
           
           <div>
-            <!-- Clean Coming Soon Poster -->
             <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#faf7f5] mb-4 border border-[#f0e8eb]">
               <img src="${pkg.poster}" alt="${pkg.title}" class="w-full h-full object-cover" onerror="this.src='assets/images/flyer-coming-soon.svg'">
             </div>
 
-            <!-- Duration & Date -->
             <div class="text-xs font-semibold text-[#765039] mb-1.5 flex items-center justify-between">
               <span>${pkg.duration}</span>
               <span class="text-slate-400 font-medium text-[11px]">${pkg.dates}</span>
             </div>
 
-            <!-- Title -->
             <h3 class="text-base font-bold text-[#3b2216] leading-snug line-clamp-2">
               ${pkg.title}
             </h3>
 
-            <!-- Details -->
             <div class="mt-3.5 space-y-1.5 text-xs text-[#765039]">
               <div class="flex items-center gap-2">
                 <span class="text-slate-400 text-[11px]">Maskapai:</span>
@@ -244,7 +240,6 @@ function renderPackageCards(packages) {
             </div>
           </div>
 
-          <!-- Card Footer (Locked State Badge) -->
           <div class="mt-5 pt-3.5 border-t border-[#f3e8ee] flex items-center justify-between text-xs">
             <span class="text-[11px] text-slate-400 font-medium">${pkg.departure}</span>
             <span class="inline-flex items-center gap-1.5 text-slate-500 font-semibold text-xs py-1 px-3 rounded-full bg-[#faf7f5] border border-[#f0e8eb]">
@@ -256,28 +251,24 @@ function renderPackageCards(packages) {
         </div>
       `;
     } else {
-      // Unlocked Official Card (Clickable, Direct Link to Detail Page using clean slug)
+      // Unlocked Official Card with clean simple slug
       html += `
         <a href="paket-detail.html?slug=${pkg.slug}" class="elm-white-card p-4 sm:p-5 flex flex-col justify-between group transition-all duration-300 block select-none">
           
           <div>
-            <!-- Clean Poster -->
             <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#faf7f5] mb-4 border border-[#f0e8eb]">
               <img src="${pkg.poster}" alt="${pkg.title}" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" onerror="this.src='assets/images/flyer-coming-soon.svg'">
             </div>
 
-            <!-- Duration & Date -->
             <div class="text-xs font-semibold text-[#d83b7d] mb-1.5 flex items-center justify-between">
               <span>${pkg.duration}</span>
               <span class="text-[#765039] font-medium text-[11px]">${pkg.dates}</span>
             </div>
 
-            <!-- Title -->
             <h3 class="text-base font-bold text-[#3b2216] group-hover:text-[#d83b7d] transition-colors leading-snug line-clamp-2">
               ${pkg.title}
             </h3>
 
-            <!-- Details -->
             <div class="mt-3.5 space-y-1.5 text-xs text-[#765039]">
               <div class="flex items-center gap-2">
                 <span class="text-slate-400 text-[11px]">Maskapai:</span>
@@ -290,7 +281,6 @@ function renderPackageCards(packages) {
             </div>
           </div>
 
-          <!-- Card Footer (Active Action) -->
           <div class="mt-5 pt-3.5 border-t border-[#f3e8ee] flex items-center justify-between">
             <span class="text-[11px] text-slate-500 font-medium">${pkg.departure}</span>
             <span class="text-xs font-bold text-[#d83b7d] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
