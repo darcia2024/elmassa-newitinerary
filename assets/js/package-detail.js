@@ -746,7 +746,7 @@ function setupBookingFormWA() {
       const text = encodeURIComponent(
         `Assalamu'alaikum Warahmatullahi Wabarakatuh,\n\nSaya ingin konsultasi rincian jadwal & itinerary untuk *${pkg.title}*:\n- Jadwal: ${pkg.departureDate}\n- Durasi: ${pkg.duration}\n- Rute: ${pkg.flightRoute}\n- Maskapai: ${pkg.airline}\n\nMohon info ketersediaan seat dan prosedur pendaftarannya. Terima kasih!`
       );
-      window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
+      window.open(`https://wa.me/6281171715125?text=${text}`, '_blank');
     });
   });
 }

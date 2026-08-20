@@ -379,7 +379,7 @@ function setupWhatsAppDirect() {
       const text = encodeURIComponent(
         `Assalamu'alaikum Warahmatullahi Wabarakatuh,\n\nSaya ingin konsultasi rincian itinerary & jadwal keberangkatan untuk paket Umrah Resmi El Massa Tour & Travel. Mohon info lengkapnya. Terima kasih!`
       );
-      window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
+      window.open(`https://wa.me/6281171715125?text=${text}`, '_blank');
     });
   });
 }
