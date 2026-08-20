@@ -1,0 +1,90 @@
+<!-- ========================================================================= -->
+<!-- SECTION ITINERARY KHUSUS UMRAH EL MASSA (STANDALONE EMBEDDABLE COMPONENT) -->
+<!-- Brand: Signature El Massa Pink (#d83b7d), Cocoa (#3c2920) & Cream (#fff8f5) -->
+<!-- ========================================================================= -->
+
+<section id="itinerary-section" class="relative pt-12 pb-20 bg-[#fff8f5] overflow-hidden text-[#3c2920] font-sans">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header Badge & Title -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#fdf2f8] text-[#d83b7d] border border-[#d83b7d]/30 text-xs font-bold uppercase tracking-wider mb-3">
+        <span>✨</span> Program Resmi Umrah 1446H / 1447H
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#3c2920] tracking-tight leading-tight">
+        Rangkaian Jadwal Perjalanan <br>
+        <span class="text-[#d83b7d] font-serif italic">Ibadah Umrah El Massa</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-[#765039] mt-3 leading-relaxed">
+        Jadwal ibadah yang dirancang seimbang antara kekhusyukan ibadah di Masjidil Haram & Nabawi, kenyamanan fisik jamaah, dan napak tilas sejarah Islam.
+      </p>
+    </div>
+
+    <!-- Interactive Journey Route Stepper -->
+    <div class="mb-8 bg-white rounded-3xl p-5 sm:p-7 border border-[#d83b7d]/15 shadow-xs">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        
+        <button onclick="filterByRouteStop('all')" class="p-3.5 rounded-2xl bg-[#fff8f5] hover:bg-[#fdf2f8] border border-[#d83b7d]/15 text-left transition-all">
+          <div class="text-[11px] font-bold text-[#765039]">HARI 01</div>
+          <div class="text-xs sm:text-sm font-bold text-[#3c2920]">Jakarta (CGK)</div>
+          <p class="text-[11px] text-[#765039]">Lounge Terminal 3</p>
+        </button>
+
+        <button onclick="filterByRouteStop('madinah')" class="p-3.5 rounded-2xl bg-[#fdf2f8] border border-[#d83b7d]/30 text-left transition-all">
+          <div class="text-[11px] font-bold text-[#d83b7d]">HARI 01 - 03</div>
+          <div class="text-xs sm:text-sm font-bold text-[#3c2920]">Madinah Munawwarah</div>
+          <p class="text-[11px] text-[#765039]">Raudhah & Ziarah</p>
+        </button>
+
+        <button onclick="filterByRouteStop('perjalanan')" class="p-3.5 rounded-2xl bg-[#f7f1ed] border border-[#765039]/20 text-left transition-all">
+          <div class="text-[11px] font-bold text-[#765039]">HARI 04</div>
+          <div class="text-xs sm:text-sm font-bold text-[#3c2920]">Bir Ali & Kereta Cepat</div>
+          <p class="text-[11px] text-[#765039]">Haramain HSR 300 km/j</p>
+        </button>
+
+        <button onclick="filterByRouteStop('makkah')" class="p-3.5 rounded-2xl bg-[#fdf2f8] border border-[#d83b7d]/30 text-left transition-all">
+          <div class="text-[11px] font-bold text-[#d83b7d]">HARI 04 - 08</div>
+          <div class="text-xs sm:text-sm font-bold text-[#3c2920]">Makkah Mukarramah</div>
+          <p class="text-[11px] text-[#765039]">Umrah & Ibadah Haram</p>
+        </button>
+
+        <button onclick="filterByRouteStop('jeddah')" class="p-3.5 rounded-2xl bg-[#fff8f5] hover:bg-[#fdf2f8] border border-[#d83b7d]/15 text-left transition-all col-span-2 sm:col-span-1">
+          <div class="text-[11px] font-bold text-[#765039]">HARI 09 - 10</div>
+          <div class="text-xs sm:text-sm font-bold text-[#3c2920]">Jeddah ➔ Jakarta</div>
+          <p class="text-[11px] text-[#765039]">Corniche & Tiba Soetta</p>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Filter & View Controls -->
+    <div class="bg-white rounded-2xl p-4 border border-[#d83b7d]/15 shadow-xs mb-8">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+        
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0">
+          <button data-filter="all" class="filter-btn active px-3 py-1.5 rounded-xl text-xs font-bold border border-[#d83b7d]/20 bg-white text-[#3c2920]">Semua Hari</button>
+          <button data-filter="madinah" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold border border-[#d83b7d]/20 bg-white text-[#3c2920]">🕌 Madinah (H1-3)</button>
+          <button data-filter="perjalanan" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold border border-[#d83b7d]/20 bg-white text-[#3c2920]">🚅 Kereta Cepat (H4)</button>
+          <button data-filter="makkah" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold border border-[#d83b7d]/20 bg-white text-[#3c2920]">🕋 Makkah (H5-8)</button>
+          <button data-filter="jeddah" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold border border-[#d83b7d]/20 bg-white text-[#3c2920]">✈️ Kepulangan (H9-10)</button>
+        </div>
+
+        <!-- Search & Toggles -->
+        <div class="flex items-center gap-2">
+          <input type="text" id="itinerary-search" placeholder="Cari kegiatan..." class="px-3 py-1.5 rounded-xl text-xs bg-[#fff8f5] border border-[#d83b7d]/20 focus:bg-white w-full sm:w-48">
+          <button id="btn-toggle-all" class="px-3 py-1.5 rounded-xl bg-[#fff8f5] text-xs font-bold text-[#3c2920] border border-[#d83b7d]/20 flex-shrink-0">🔽 Buka Semua</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dynamic Timeline List -->
+    <div id="timeline-container" class="space-y-6"></div>
+
+    <!-- Bento Grid Container (Hidden by Default) -->
+    <div id="bento-container" class="hidden"></div>
+
+  </div>
+</section>

@@ -1,0 +1,229 @@
+/* ==========================================================================
+   EL MASSA TOUR & TRAVEL - OFFICIAL STYLESHEET
+   Warm Chocolate Brown & Pink Brand Palette
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+  --elm-pink: #d83b7d;
+  --elm-pink-hover: #c22c6c;
+  --elm-pink-light: #f472b6;
+  --elm-pink-soft: #fff0f5;
+  --elm-rose: #f9dbe8;
+  
+  --elm-dark: #3b2216;
+  --elm-charcoal: #4a2e22;
+  --elm-brown: #765039;
+  --elm-brown-hover: #5d3b27;
+  --elm-brown-soft: #f7f1ed;
+  --elm-espresso: #2a160d;
+  
+  --elm-cream: #fff8f6;
+  --elm-cream-card: #fdf5f7;
+  --elm-border-pink: #fce7f3;
+  --elm-border-subtle: #f3e8ee;
+  
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--elm-charcoal);
+  background-color: #fdfaf8;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--elm-rose);
+  color: var(--elm-dark);
+}
+
+/* Tabular Numbers */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Card Elevation & Border */
+.elm-hero-box {
+  background-color: #fff7f9;
+  border: 1px solid #fce7f3;
+  border-radius: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .elm-hero-box {
+    border-radius: 2.25rem;
+  }
+}
+
+.elm-white-card {
+  background-color: #FFFFFF;
+  border: 1px solid #f3e8ee;
+  border-radius: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .elm-white-card:hover {
+    transform: translateY(-2px);
+    border-color: #f472b6;
+    box-shadow: 0 12px 28px -8px rgba(216, 59, 125, 0.14);
+  }
+}
+
+/* Pill buttons */
+.elm-pill-dark {
+  background-color: #3b2216;
+  color: #FFFFFF;
+}
+.elm-pill-dark:hover {
+  background-color: #523120;
+}
+
+.elm-pill-pink {
+  background-color: #d83b7d;
+  color: #FFFFFF;
+}
+.elm-pill-pink:hover {
+  background-color: #c22c6c;
+}
+
+/* Filter Tab Pills */
+.filter-btn {
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+
+.filter-btn.active {
+  background-color: #3b2216 !important;
+  color: #FFFFFF !important;
+  border-color: #3b2216 !important;
+  box-shadow: 0 4px 12px rgba(59, 34, 22, 0.25) !important;
+}
+
+/* Mobile Horizontal Scroll Containers with Momentum */
+.horizontal-snap-scroll {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 4px;
+}
+
+.horizontal-snap-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* Timeline Custom Connectors */
+.timeline-line {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  width: 2px;
+  background: linear-gradient(180deg, #d83b7d 0%, #f472b6 50%, rgba(216, 59, 125, 0.15) 100%);
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 1.25rem;
+  }
+}
+
+.timeline-badge {
+  box-shadow: 0 0 0 4px #FFFFFF, 0 0 16px rgba(216, 59, 125, 0.25);
+}
+
+/* Scrollbar Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fff0f5;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #fbcfe8;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
+
+/* Mobile Sticky Bottom Action Bar */
+.mobile-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid #fce7f3;
+  padding: 0.75rem 1rem;
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -4px 20px rgba(59, 34, 22, 0.08);
+}
+
+@media (min-width: 1024px) {
+  .mobile-bottom-bar {
+    display: none;
+  }
+}
+
+/* Mobile Interactive Touch Targets */
+.touch-target-min {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Print Stylesheet */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  
+  .no-print,
+  .mobile-bottom-bar,
+  header,
+  nav,
+  footer,
+  button {
+    display: none !important;
+  }
+  
+  .day-accordion-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #CBD5E1 !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem !important;
+  }
+}
