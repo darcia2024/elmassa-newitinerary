@@ -1,13 +1,14 @@
 /**
  * EL MASSA TOUR & TRAVEL - OFFICIAL 10 PACKAGES CATALOG ENGINE
- * Simple, Clean Slugs & Editorial Design
+ * Simple Direct URLs & Editorial Design
  */
 
-// Official 10 Packages Catalog Database with Super Simple Slugs
+// Official 10 Packages Catalog Database with Direct Clean URLs
 const PACKAGES_DATA = [
   {
     id: "november",
     slug: "november",
+    url: "paket-november2026",
     title: "Umrah Special November 2026 (10 Hari Tanpa Transit)",
     shortTitle: "Umrah Special November",
     category: "direct",
@@ -25,6 +26,7 @@ const PACKAGES_DATA = [
   {
     id: "hanan-attaki",
     slug: "hanan-attaki",
+    url: "paket-hanan-attaki",
     title: "Umrah Special Bersama Ustadz Hanan Attaki",
     shortTitle: "Umrah Ust. Hanan Attaki",
     category: "ustadz",
@@ -42,6 +44,7 @@ const PACKAGES_DATA = [
   {
     id: "akhir-tahun",
     slug: "akhir-tahun",
+    url: "paket-akhir-tahun",
     title: "Umrah Nyaman Akhir Tahun (Program 9 Hari)",
     shortTitle: "Umrah Nyaman Akhir Tahun",
     category: "akhir-tahun",
@@ -59,6 +62,7 @@ const PACKAGES_DATA = [
   {
     id: "nisfu-syaban",
     slug: "nisfu-syaban",
+    url: "paket-nisfu-syaban",
     title: "Umrah Nisfu Sya'ban di Makkah (9 Hari)",
     shortTitle: "Umrah Nisfu Sya'ban",
     category: "syaban",
@@ -76,6 +80,7 @@ const PACKAGES_DATA = [
   {
     id: "ramadan",
     slug: "ramadan",
+    url: "paket-ramadan",
     title: "Umrah Istimewa Awal Ramadan di Makkah (9 Hari)",
     shortTitle: "Umrah Awal Ramadan",
     category: "ramadan",
@@ -93,6 +98,7 @@ const PACKAGES_DATA = [
   {
     id: "orang-tua",
     slug: "orang-tua",
+    url: "paket-orang-tua",
     title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
     shortTitle: "Umrah Sayang Orang Tua",
     category: "syawal",
@@ -110,6 +116,7 @@ const PACKAGES_DATA = [
   {
     id: "syawal",
     slug: "syawal",
+    url: "paket-syawal",
     title: "Umrah Lebih Nyaman Syawal (Program 9 & 12 Hari)",
     shortTitle: "Umrah Nyaman Syawal",
     category: "syawal",
@@ -127,6 +134,7 @@ const PACKAGES_DATA = [
   {
     id: "muharram",
     slug: "muharram",
+    url: "paket-muharram",
     title: "Umrah Muharram Awal Musim Baru 1449 H",
     shortTitle: "Umrah Muharram Awal Musim",
     category: "awal-musim",
@@ -144,6 +152,7 @@ const PACKAGES_DATA = [
   {
     id: "liburan-9h",
     slug: "liburan-9h",
+    url: "paket-liburan-9h",
     title: "Umrah Liburan Sekolah (Program 9 Hari)",
     shortTitle: "Umrah Liburan Sekolah 9 Hari",
     category: "liburan",
@@ -161,6 +170,7 @@ const PACKAGES_DATA = [
   {
     id: "liburan-12h",
     slug: "liburan-12h",
+    url: "paket-liburan-12h",
     title: "Umrah Liburan Sekolah (Program 12 Hari Lengkap)",
     shortTitle: "Umrah Liburan Sekolah 12 Hari",
     category: "liburan",
@@ -251,9 +261,10 @@ function renderPackageCards(packages) {
         </div>
       `;
     } else {
-      // Unlocked Official Card with clean simple slug
+      // Unlocked Official Card with clean direct URL
+      const targetUrl = pkg.url || `paket-detail.html?slug=${pkg.slug}`;
       html += `
-        <a href="paket-detail.html?slug=${pkg.slug}" class="elm-white-card p-4 sm:p-5 flex flex-col justify-between group transition-all duration-300 block select-none">
+        <a href="${targetUrl}" class="elm-white-card p-4 sm:p-5 flex flex-col justify-between group transition-all duration-300 block select-none">
           
           <div>
             <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#faf7f5] mb-4 border border-[#f0e8eb]">
@@ -348,6 +359,7 @@ function setupLiveSearch() {
         pkg.title.toLowerCase().includes(q) ||
         pkg.shortTitle.toLowerCase().includes(q) ||
         pkg.slug.toLowerCase().includes(q) ||
+        (pkg.url && pkg.url.toLowerCase().includes(q)) ||
         pkg.airline.toLowerCase().includes(q) ||
         pkg.departure.toLowerCase().includes(q) ||
         pkg.hotelMakkah.toLowerCase().includes(q) ||
