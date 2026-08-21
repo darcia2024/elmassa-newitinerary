@@ -134,7 +134,7 @@ const PACKAGES_DATA = [
     flightRoute: "Pangkal Pinang ➔ Jakarta ➔ Madinah (MED) | Jeddah ➔ Jakarta ➔ PGK",
     departureCity: "Pangkal Pinang & Jakarta",
     hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
-    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
+    hotelMakkah: "Olayan Ajyad (0 km ± 1 menit ke Haram)",
     bonus: "Kajian Tematik Bersama Ust. Dr. Muhammad Kurnia + Free Thaif + D'Prima Transit PP"
   },
   {

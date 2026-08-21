@@ -748,7 +748,7 @@ const ALL_PACKAGES = {
     flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
     departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
     hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
-    hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
+    hotelMakkah: "Olayan Ajyad (0 km ± 1 Menit ke Pelataran Haram)",
     seatsAvailable: 35,
     leadUstadz: "Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag. & Muthawwif Mukim",
     bonus: "Kajian Tematik Bersama Ust. Dr. Muhammad Kurnia + Free City Tour Thaif + D'Prima Hotel Transit PP",
