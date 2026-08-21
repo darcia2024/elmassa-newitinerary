@@ -469,29 +469,190 @@ const ALL_PACKAGES = {
     itineraryDays: create11DaySyawalItinerary("Ustadz Pembimbing Khusus Lansia")
   },
 
+// Helper for 11-Day Umrah Nisfu Sya'ban di Makkah (20 - 30 Jan 2027)
+function createNisfuSyabanItinerary() {
+  return [
+    {
+      day: 1,
+      date: "20 Januari 2027",
+      city: "Pangkal Pinang ➔ Jakarta ➔ Jeddah (Transit Hotel Jakarta)",
+      title: "Keberangkatan Menuju Jakarta & Pemantapan Manasik di Hotel Transit",
+      agenda: [
+        { time: "09:00 WIB", title: "Berkumpul di Bandara Depati Amir Pangkal Pinang", desc: "Jemaah berkumpul pukul 09.00 WIB pagi di Bandar Udara Internasional Depati Amir Pangkal Pinang untuk persiapan take-off ke Jakarta." },
+        { time: "12:25 WIB", title: "Penerbangan Garuda Indonesia ke Jakarta", desc: "Jemaah take-off dari Pangkal Pinang pada pukul 12.25 WIB menggunakan pesawat Garuda Indonesia dan tiba di Bandara Jakarta pukul 13.54 WIB." },
+        { time: "15:00 WIB", title: "Transfer ke Hotel Transit Jakarta", desc: "Dilanjutkan menuju hotel transit di Jakarta, istirahat dan menginap 1 malam di hotel transit (nama hotel diinfokan kemudian)." },
+        { time: "19:30 WIB", title: "Pemantapan Manasik Umrah Nisfu Sya'ban", desc: "Pukul 19.30 WIB - selesai: Pemantapan manasik umrah di mushalla / meeting room hotel bersama Ustadz Pembimbing." }
+      ],
+      highlight: "Istirahat nyaman di hotel transit Jakarta dan bimbingan manasik intensif sebelum penerbangan ke Jeddah.",
+      sunnahAmalan: "Membaca doa safar dan meluruskan niat semata-mata karena Allah Ta'ala.",
+      dressCode: "Batik resmi El Massa saat berangkat."
+    },
+    {
+      day: 2,
+      date: "21 Januari 2027",
+      city: "Jakarta ➔ Jeddah (Garuda Indonesia) ➔ Madinah Munawwarah",
+      title: "Penerbangan Garuda Indonesia ke Jeddah & Transfer Bus VIP ke Madinah",
+      agenda: [
+        { time: "05:30 WIB", title: "Berkumpul di Lobby Hotel Transit", desc: "Pukul 05.30 berkumpul di lobby hotel untuk persiapan transfer ke Bandara Soekarno-Hatta Terminal 3 Internasional." },
+        { time: "11:25 WIB", title: "Penerbangan Garuda Indonesia Menuju Jeddah", desc: "Penerbangan langsung ke Jeddah pada jam 11.25 WIB menggunakan pesawat Garuda Indonesia dan mendarat di Bandara Jeddah pukul 17.30 LT." },
+        { time: "18:30 LT", title: "Perjalanan Bus VIP ke Madinah Munawwarah", desc: "Dilanjutkan perjalanan menggunakan bus VIP AC menuju kota Madinah untuk check-in hotel dan beristirahat." }
+      ],
+      highlight: "Penerbangan nyaman bersama Garuda Indonesia dan tiba di Kota Suci Madinah.",
+      sunnahAmalan: "Memperbanyak sholawat atas Nabi Muhammad SAW saat memasuki tanah haram Madinah.",
+      dressCode: "Busana muslim rapi dan nyaman."
+    },
+    {
+      day: 3,
+      date: "22 Januari 2027",
+      city: "Madinah Munawwarah (Raudhah & Ziarah)",
+      title: "Masuk Raudhah Sesuai Tasreh Nusuk & Ziarah Sekitar Masjid Nabawi",
+      agenda: [
+        { time: "Tasreh Nusuk", title: "Memasuki Raudhah Asy-Syarifah (Taman Surga)", desc: "Jadwal hari ini memasuki Raudhah (InsyaAllah apabila Tasreh keluar) mengikuti jadwal yang sudah ditentukan: (1) Selesai shalat subuh - 11.00: Jamaah perempuan, (2) 11.00 - Selesai shalat isya: Jamaah laki-laki, (3) Selesai isya - 23.30: Jamaah perempuan, (4) 23.30 - Shalat subuh: Jamaah laki-laki." },
+        { time: "Pagi", title: "Ziarah Jejak Sejarah Sekitar Masjid Nabawi", desc: "Jemaah berkumpul untuk melaksanakan Ziarah dan Pengenalan sekitar Masjid Nabawi: Pengenalan Saqifah Bani Sa'idah, Makam Rasulullah SAW dan makam Sahabat (dari sisi luar masjid), Masjid Ali, Masjid Ghamamah, Pemakaman Baqi'." },
+        { time: "Siang", title: "Shalat Jumat di Masjid Nabawi & Acara Bebas", desc: "Setelahnya jamaah bersiap untuk melaksanakan shalat Jumat berjamaah di Masjid Nabawi. Selesai shalat Jumat acara bebas." }
+      ],
+      highlight: "Bermunajat di Raudhah Asy-Syarifah dan Sholat Jumat berjamaah di Masjid Nabawi.",
+      sunnahAmalan: "Memperbanyak doa kebaikan dunia akhirat di Raudhah dan memperbanyak sholawat.",
+      dressCode: "Gamis putih / busana muslim bersih."
+    },
+    {
+      day: 4,
+      date: "23 Januari 2027",
+      city: "Madinah Munawwarah (Ziarah Sejarah)",
+      title: "Tour & Ziarah Sejarah Islam Madinah + Manasik Singkat Sebelum Umrah",
+      agenda: [
+        { time: "07:00 LT", title: "Ziarah Masjid Quba & Jabal Uhud", desc: "Jemaah melaksanakan Tour dan Ziarah jejak sejarah Islam di sekitar kota Madinah: Masjid Quba (Masjid yang pertama dibangun oleh Rasulullah SAW), Jabal Uhud (makam para syuhada yang wafat saat Perang Uhud)." },
+        { time: "10:00 LT", title: "Kebun Kurma & Melewati Masjid Bersejarah", desc: "Kunjungan Kebun Kurma (kondisional). Sepanjang jalan akan melewati Masjid Qiblatain dan Masjid Khandaq." },
+        { time: "Sore - Malam", title: "Ibadah Mandiri di Nabawi & Manasik Singkat Ihram", desc: "Setelahnya acara bebas memperbanyak ibadah di Masjid Nabawi (I'tikaf, Tadarus dll). Kemudian melaksanakan manasik singkat pada sore/malam harinya sebelum keberangkatan Umrah esok hari." }
+      ],
+      highlight: "Pahala 1x Umrah di Masjid Quba & pemantapan teknis rukun ihram.",
+      sunnahAmalan: "Menjaga wudhu sejak dari kamar hotel sebelum menuju Masjid Quba.",
+      dressCode: "Pakaian sopan kasual muslim & alas kaki nyaman."
+    },
+    {
+      day: 5,
+      date: "24 Januari 2027",
+      city: "Madinah ➔ Miqat Bir Ali ➔ Makkah Mukarramah",
+      title: "Check-out Madinah, Miqat di Bir Ali & Pelaksanaan Umrah Pertama",
+      agenda: [
+        { time: "Pagi", title: "Persiapan Mandi Sunnah Ihram di Hotel", desc: "Koper diletakkan di depan kamar masing-masing untuk check-out dari hotel Madinah dan bersiap ke Mekah. Jemaah menggunakan pakaian Umrah dan Ihram untuk laki-laki." },
+        { time: "14:00 LT", title: "Berangkat ke Masjid Bir Ali (Dzulhulaifah)", desc: "Bus berangkat sekitar jam 14.00 LT siang, kemudian berhenti di Masjid Bir Ali/Dzulhulaifah untuk Miqat dan mengambil niat Umrah dipandu oleh Muthawwif." },
+        { time: "Perjalanan", title: "Gema Talbiyah Sepanjang Perjalanan ke Makkah", desc: "Selama perjalanan ke kota Mekah, jemaah memperbanyak membaca Talbiyah 'Labbaikallahumma Labbaik'." },
+        { time: "Malam", title: "Tiba di Makkah & Prosesi Rukun Umrah Pertama", desc: "Setibanya di Mekah langsung ke hotel menyimpan barang-barang. Jika kamar belum ready jemaah langsung melaksanakan prosesi Umrah (Thawaf, Sa'i, Tahallul) dibimbing oleh Muthawwif." }
+      ],
+      highlight: "Niat ihram di Miqat Bir Ali dan pelaksanaan rukun Umrah pertama di depan Ka'bah.",
+      sunnahAmalan: "Melantunkan Talbiyah tanpa henti sepanjang perjalanan safar.",
+      dressCode: "Kain Ihram (Pria) / Busana Ihram Syar'i (Wanita)."
+    },
+    {
+      day: 6,
+      date: "25 Januari 2027",
+      city: "Makkah Mukarramah",
+      title: "Ibadah Mandiri, Thawaf Sunnah & Shalat Jumat di Masjidil Haram",
+      agenda: [
+        { time: "Pagi", title: "Istirahat Pemulihan Fisik Pasca Umrah", desc: "Acara bebas. Jemaah memperbanyak ibadah di Masjidil Haram yaitu I'tikaf, Thawaf sunnah dll." },
+        { time: "Siang", title: "Shalat Jumat Berjamaah di Masjidil Haram", desc: "Tidak lupa siang harinya semua jemaah melaksanakan ibadah shalat Jumat di Masjidil Haram (Pahala 100.000 kali lipat)." },
+        { time: "Sore - Malam", title: "Thawaf Sunnah & Munajat Malam Nisfu Sya'ban", desc: "Memperbanyak thawaf sunnah di pelataran Ka'bah dan munajat doa di Hijir Ismail & Multazam menyambut berkah bulan Sya'ban." }
+      ],
+      highlight: "Pahala 100.000 kali lipat Shalat Jumat di Masjidil Haram dan munajat berkah.",
+      sunnahAmalan: "Memperbanyak minum air Zamzam dan thawaf sunnah.",
+      dressCode: "Gamis putih bersih / pakaian muslim rapi."
+    },
+    {
+      day: 7,
+      date: "26 Januari 2027",
+      city: "Makkah Mukarramah (Ziarah & Miqat Ji'ranah)",
+      title: "Tour Jejak Sejarah Kota Makkah & Miqat Umrah ke-2 (Opsional)",
+      agenda: [
+        { time: "07:00 LT", title: "Tour Ziarah Jejak Sejarah Islam Kota Makkah", desc: "Jemaah melaksanakan Tour dan Ziarah jejak sejarah Islam di sekitar kota Mekah: Jabal Tsur, Padang Arafah, Jabal Rahmah, Muzdalifah, Mina, Jabal Nur (kondisional)." },
+        { time: "10:30 LT", title: "Singgah di Masjid Ji'ranah untuk Miqat Umrah ke-2", desc: "Kemudian di akhir akan singgah di Masjid Ji'ranah untuk Miqat dan Jemaah yang ingin melaksanakan Umrah ke-2 (opsional/tidak wajib) bersiap mengambil niat untuk Umrah dengan mengenakan pakaian ihram." },
+        { time: "Siang / Sore", title: "Pelaksanaan Umrah ke-2 di Masjidil Haram", desc: "Bagi jemaah yang mengambil niat ihram melaksanakan Thawaf, Sa'i, dan Tahallul di Masjidil Haram dibimbing oleh Muthawwif." }
+      ],
+      highlight: "Napak tilas Padang Arafah & Jabal Rahmah serta kesempatan Umrah ke-2 dari Ji'ranah.",
+      sunnahAmalan: "Berdoa memohon ampunan di Padang Arafah.",
+      dressCode: "Pakaian Ihram (bagi yang Umrah 2) / Pakaian sopan muslim."
+    },
+    {
+      day: 8,
+      date: "27 Januari 2027",
+      city: "Makkah ➔ Thaif ➔ Makkah",
+      title: "Bonus City Tour Thaif Gratis dari El Massa & Miqat Umrah ke-3",
+      agenda: [
+        { time: "Pagi", title: "Perjalanan Menuju Kota Sejuk Thaif", desc: "(Mekah - Thaif - Mekah) Setelah sarapan, semua jemaah bersiap menuju kota Thaif untuk menikmati Bonus City Tour Thaif Gratis dari El Massa (wahana berbayar oleh masing-masing)." },
+        { time: "Siang", title: "Ziarah Sejarah & Wisata Alam Thaif", desc: "Ziarah Masjid Ibnu Abbas, melihat perkebunan dan pabrik penyulingan parfum mawar, dan menikmati pemandangan alam pegunungan Thaif." },
+        { time: "Sore / Malam", title: "Miqat Umrah ke-3 & Kembali ke Makkah", desc: "Pulang dari Thaif jamaah akan melewati tempat miqat dan ihram bagi yang mau Umrah ke-3 di Masjidil Haram." }
+      ],
+      highlight: "Keindahan alam pegunungan Thaif yang sejuk dan bonus ziarah gratis dari El Massa.",
+      sunnahAmalan: "Tadabbur sejarah kesabaran dakwah Nabi SAW di Thaif.",
+      dressCode: "Busana muslim hangat untuk udara dingin Thaif."
+    },
+    {
+      day: 9,
+      date: "28 Januari 2027",
+      city: "Makkah ➔ Thawaf Wada' ➔ Bandara Jeddah (G983) ➔ Jakarta",
+      title: "Thawaf Wada' (Perpisahan), Check-out Hotel & Penerbangan Malam",
+      agenda: [
+        { time: "Pagi", title: "Thawaf Wada' di Masjidil Haram", desc: "Setelah sarapan, semua koper jamaah diletakkan di depan kamar masing-masing. Kemudian berangkat menuju Masjidil Haram untuk melaksanakan Thawaf Wada' (pamitan dengan Ka'bah)." },
+        { time: "14:00 LT", title: "Check-out Hotel Makkah & Transfer ke Bandara Jeddah", desc: "Jemaah check-out dari hotel pukul 14.00 LT setelah selesai makan siang, dilanjutkan perjalanan bus VIP menuju Bandara Internasional Jeddah." },
+        { time: "21:55 LT", title: "Take-off Penerbangan Malam Menuju Jakarta", desc: "Pesawat ke Jakarta take-off dari Bandara Jeddah pukul 21.55 LT (G983 / Garuda) dan akan tiba esok harinya pukul 11.50 WIB." }
+      ],
+      highlight: "Thawaf Wada' penuh haru di depan Ka'bah dan penerbangan pulang yang nyaman.",
+      sunnahAmalan: "Menatap Ka'bah dengan penuh doa dan harapan agar diundang kembali ke Tanah Suci.",
+      dressCode: "Batik resmi El Massa."
+    },
+    {
+      day: 10,
+      date: "29 Januari 2027",
+      city: "Jakarta (Landing & Transit Hotel)",
+      title: "Landing di Jakarta & Istirahat di Hotel Transit",
+      agenda: [
+        { time: "11:50 WIB", title: "Mendarat di Bandara Soekarno-Hatta Jakarta", desc: "Jamaah mendarat di Jakarta pukul 11.50 WIB, proses klaim bagasi internasional dan imigrasi." },
+        { time: "14:00 WIB", title: "Check-in & Istirahat di Hotel Transit Jakarta", desc: "Transfer menuju hotel transit yang disediakan travel, check-in kamar, istirahat dan menginap sambil menunggu penerbangan ke Pangkal Pinang keesokan harinya." }
+      ],
+      highlight: "Istirahat pemulihan fisik yang nyaman di hotel transit Jakarta.",
+      sunnahAmalan: "Bersyukur atas kelancaran rangkaian ibadah di Tanah Suci.",
+      dressCode: "Pakaian bebas rapi."
+    },
+    {
+      day: 11,
+      date: "30 Januari 2027",
+      city: "Jakarta (CGK) ➔ Pangkal Pinang (PGK) Garuda",
+      title: "Penerbangan Garuda Indonesia ke Pangkal Pinang & Kepulangan Penuh Berkah",
+      agenda: [
+        { time: "05:30 WIB", title: "Berkumpul di Lobby Hotel Transit", desc: "Pukul 05.30 jamaah berkumpul di lobby hotel untuk bersiap menuju Terminal 3 Bandara Soekarno-Hatta." },
+        { time: "10:20 WIB", title: "Penerbangan Garuda Indonesia ke Pangkal Pinang", desc: "Jamaah akan terbang dari Jakarta pada pukul 10.20 WIB menggunakan maskapai Garuda Indonesia dan tiba di Bandar Udara Depati Amir Pangkal Pinang pada pukul 11.40 WIB." },
+        { time: "12:00 WIB", title: "Pembagian Bagasi, Zamzam 5L & Penutupan", desc: "Pembagian bagasi, air Zamzam 5 Liter, dan bingkisan kenang-kenangan. Berakhirlah rangkaian perjalanan ibadah penuh makna ini bersama El Massa. Sampai berjumpa pada perjalanan selanjutnya!" }
+      ],
+      highlight: "Tiba kembali di kampung halaman bersama keluarga tercinta dengan predikat Umrah Mabrur.",
+      sunnahAmalan: "Melakukan sujud syukur setibanya di tanah air.",
+      dressCode: "Pakaian bebas rapi."
+    }
+  ];
+}
+
   // 6. UMRAH NISFU SYA'BAN DI MEKKAH
   "nisfu-syaban": {
     id: "nisfu-syaban",
     slug: "nisfu-syaban",
-    title: "Umrah Nisfu Sya'ban di Makkah (9 Hari)",
-    shortTitle: "Umrah Nisfu Sya'ban",
+    title: "Umrah Nisfu Sya'ban di Makkah (11 Hari)",
+    shortTitle: "Umrah Nisfu Sya'ban di Makkah",
     category: "syaban",
     badge: "Nisfu Sya'ban",
     poster: "assets/images/poster-nisfu-syaban.png",
     hasFlyer: true,
     isLocked: false,
-    duration: "9 Hari (20 - 30 Jan 2026)",
-    departureDate: "20 Januari 2026",
-    returnDate: "30 Januari 2026",
-    airline: "Saudia Airlines / Garuda Indonesia Direct",
-    flightRoute: "Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta (CGK)",
-    departureCity: "Jakarta (CGK) & Pangkal Pinang (PGK)",
+    duration: "11 Hari (20 - 30 Jan 2027)",
+    departureDate: "20 Januari 2027",
+    returnDate: "30 Januari 2027",
+    airline: "Garuda Indonesia Direct Flight",
+    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Jeddah | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
+    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
     hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
     hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
-    seatsAvailable: 30,
-    leadUstadz: "Ustadz Pembimbing Ibadah Senior El Massa",
-    bonus: "Ibadah Malam Nisfu Sya'ban di Depan Ka'bah + Free City Tour Thaif",
-    itineraryDays: createTailoredItinerary("Umrah Nisfu Sya'ban", 9, 3, 3, "Saudia Airlines / Garuda Indonesia", true, "Doa & munajat khusus malam Nisfu Sya'ban di depan Ka'bah.")
+    seatsAvailable: 35,
+    leadUstadz: "Ustadz Pembimbing Ibadah Senior El Massa & Muthawwif Mukim",
+    bonus: "Ibadah Malam Nisfu Sya'ban di Depan Ka'bah + Free City Tour Thaif + Hotel Transit PP",
+    itineraryDays: createNisfuSyabanItinerary()
   },
 
 // Helper for 10-Day Umrah Awal Ramadan di Makkah (05 - 15 Feb 2027)
