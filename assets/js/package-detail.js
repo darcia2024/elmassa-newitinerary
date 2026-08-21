@@ -342,133 +342,6 @@ function create11DaySyawalItinerary(ustadzName) {
   ];
 }
 
-// Comprehensive Packages Database
-const ALL_PACKAGES = {
-  // 1. UMRAH SPECIAL NOVEMBER 2026
-  "november": {
-    id: "november",
-    slug: "november",
-    title: "Umrah Special November 2026 (10 Hari Tanpa Transit)",
-    shortTitle: "Umrah Special November",
-    category: "direct",
-    badge: "Paling Favorit",
-    poster: "assets/images/poster-november-reguler.png",
-    hasFlyer: true,
-    isLocked: false,
-    duration: "10 Hari (03 - 13 Nov 2026)",
-    departureDate: "03 November 2026",
-    returnDate: "13 November 2026",
-    airline: "Saudia Airlines (Direct Flight / Tanpa Transit)",
-    flightRoute: "Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta (CGK)",
-    departureCity: "Jakarta (CGK) & Pangkal Pinang (PGK)",
-    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
-    hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
-    seatsAvailable: 25,
-    leadUstadz: "Ustadz Pembimbing Bersertifikat Kemenag RI & Muthawwif Mukim",
-    bonus: "Free City Tour Thaif & Pabrik Parfum + Bimbingan Ibadah Sesuai Sunnah",
-    itineraryDays: createTailoredItinerary("Umrah Special November", 10, 3, 4, "Saudia Airlines Direct", true, "Kajian fiqih umrah & sunnah ihram bersama pembimbing di hotel.")
-  },
-
-  // 2. UMRAH SPECIAL BERSAMA USTADZ HANAN ATTAKI
-  "hanan-attaki": {
-    id: "hanan-attaki",
-    slug: "hanan-attaki",
-    title: "Umrah Special Bersama Ustadz Hanan Attaki",
-    shortTitle: "Umrah Ust. Hanan Attaki",
-    category: "ustadz",
-    badge: "Spesial Ustadz",
-    poster: "assets/images/poster-november-hanan-attaki.png",
-    hasFlyer: true,
-    isLocked: false,
-    duration: "10 Hari (17 - 26 Nov 2026)",
-    departureDate: "17 November 2026",
-    returnDate: "26 November 2026",
-    airline: "Saudia Airlines SV821 (Landing Madinah)",
-    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
-    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
-    hotelMakkah: "Grand Al Massa (★5) / Pilihan Upgrade: Sofwah / Zamzam Tower (★5)",
-    seatsAvailable: 25,
-    leadUstadz: "Ustadz Hanan Attaki, Lc. (Founder Shift Pemuda Hijrah) & Muthawwif Mukim",
-    bonus: "Kajian Eksklusif Tematik di Madinah & Makkah + Free City Tour Thaif + D'Prima Hotel Transit",
-    itineraryDays: createTailoredItinerary("Umrah Ust. Hanan Attaki", 10, 3, 4, "Saudia Airlines (Landing Madinah)", true, "Kajian Khusus Tematik Bersama Ustadz Hanan Attaki di Madinah & Makkah.")
-  },
-
-  // 3. UMRAH NYAMAN AKHIR TAHUN
-  "akhir-tahun": {
-    id: "akhir-tahun",
-    slug: "akhir-tahun",
-    title: "Umrah Nyaman Akhir Tahun (Program 9 Hari)",
-    shortTitle: "Umrah Nyaman Akhir Tahun",
-    category: "akhir-tahun",
-    badge: "Akhir Tahun",
-    poster: "assets/images/poster-desember-akhir-tahun.jpg",
-    hasFlyer: true,
-    isLocked: false,
-    duration: "9 Hari (14 - 22 Des 2026)",
-    departureDate: "14 Desember 2026",
-    returnDate: "22 Desember 2026",
-    airline: "Saudia Airlines Direct",
-    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Jeddah/Madinah | Jeddah ➔ Jakarta ➔ Pangkal Pinang",
-    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
-    hotelMakkah: "Sawaed Al Khaer (Pilihan Upgrade Bintang 5: Makkah Tower Hotel)",
-    seatsAvailable: 36,
-    leadUstadz: "Dewan Pembimbing Ibadah Senior El Massa & Muthawwif Mukim",
-    bonus: "Bonus City Tour Thaif Gratis dari El Massa + D'Prima Hotel Transit PP + Air Zamzam 5L",
-    itineraryDays: createTailoredItinerary("Umrah Nyaman Akhir Tahun", 9, 3, 3, "Saudia Airlines Direct", true, "Kajian muhasabah dan tausiyah akhir tahun di Masjid Nabawi.")
-  },
-
-  // 4. UMRAH SPECIAL BERSAMA USTADZ DR. H. MUHAMMAD KURNIA
-  "kurnia": {
-    id: "kurnia",
-    slug: "kurnia",
-    title: "Umrah Special Bersama Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag.",
-    shortTitle: "Umrah Ust. Dr. Muhammad Kurnia",
-    category: "ustadz",
-    badge: "Spesial Ustadz",
-    poster: "assets/images/poster-muhammad-kurnia.png",
-    hasFlyer: true,
-    isLocked: false,
-    duration: "11 Hari (16 - 27 Mar 2027)",
-    departureDate: "16 Maret 2027",
-    returnDate: "27 Maret 2027",
-    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
-    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
-    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
-    hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
-    seatsAvailable: 35,
-    leadUstadz: "Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag. & Muthawwif Mukim",
-    bonus: "Kajian Tematik Bersama Ust. Dr. Muhammad Kurnia + Free City Tour Thaif + D'Prima Hotel Transit PP",
-    itineraryDays: create11DaySyawalItinerary("Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag.")
-  },
-
-  // 5. UMRAH SAYANG ORANG TUA (11 HARI)
-  "orang-tua": {
-    id: "orang-tua",
-    slug: "orang-tua",
-    title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
-    shortTitle: "Umrah Sayang Orang Tua",
-    category: "syawal",
-    badge: "Ramah Lansia 0 km",
-    poster: "assets/images/poster-sayang-orang-tua.png",
-    hasFlyer: true,
-    isLocked: false,
-    duration: "11 Hari (16 - 27 Mar 2027)",
-    departureDate: "16 Maret 2027",
-    returnDate: "27 Maret 2027",
-    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
-    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
-    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
-    hotelMakkah: "Olayan Ajyad (0 km ± 1 Menit ke Pelataran Haram)",
-    seatsAvailable: 30,
-    leadUstadz: "Tim Medis & Ustadz Pembimbing Ramah Lansia",
-    bonus: "Akses Super Dekat Khusus Lansia & Kursi Roda + Free City Tour Thaif + D'Prima Hotel Transit PP",
-    itineraryDays: create11DaySyawalItinerary("Ustadz Pembimbing Khusus Lansia")
-  },
-
 // Helper for 11-Day Umrah Nisfu Sya'ban di Makkah (20 - 30 Jan 2027)
 function createNisfuSyabanItinerary() {
   return [
@@ -579,7 +452,7 @@ function createNisfuSyabanItinerary() {
       title: "Bonus City Tour Thaif Gratis dari El Massa & Miqat Umrah ke-3",
       agenda: [
         { time: "Pagi", title: "Perjalanan Menuju Kota Sejuk Thaif", desc: "(Mekah - Thaif - Mekah) Setelah sarapan, semua jemaah bersiap menuju kota Thaif untuk menikmati Bonus City Tour Thaif Gratis dari El Massa (wahana berbayar oleh masing-masing)." },
-        { time: "Siang", title: "Ziarah Sejarah & Wisata Alam Thaif", desc: "Ziarah Masjid Ibnu Abbas, melihat perkebunan dan pabrik penyulingan parfum mawar, dan menikmati pemandangan alam pegunungan Thaif." },
+        { time: "Siang", title: "Ziarah Sejarah & Wisata Alam Thaif", desc: "Ziarah Masjid Ibnu Abbas, melihat perkebunan dan pabrik penyulang parfum mawar, dan menikmati pemandangan alam pegunungan Thaif." },
         { time: "Sore / Malam", title: "Miqat Umrah ke-3 & Kembali ke Makkah", desc: "Pulang dari Thaif jamaah akan melewati tempat miqat dan ihram bagi yang mau Umrah ke-3 di Masjidil Haram." }
       ],
       highlight: "Keindahan alam pegunungan Thaif yang sejuk dan bonus ziarah gratis dari El Massa.",
@@ -629,31 +502,6 @@ function createNisfuSyabanItinerary() {
     }
   ];
 }
-
-  // 6. UMRAH NISFU SYA'BAN DI MEKKAH
-  "nisfu-syaban": {
-    id: "nisfu-syaban",
-    slug: "nisfu-syaban",
-    title: "Umrah Nisfu Sya'ban di Makkah (11 Hari)",
-    shortTitle: "Umrah Nisfu Sya'ban di Makkah",
-    category: "syaban",
-    badge: "Nisfu Sya'ban",
-    poster: "assets/images/poster-nisfu-syaban.png",
-    hasFlyer: true,
-    isLocked: false,
-    duration: "11 Hari (20 - 30 Jan 2027)",
-    departureDate: "20 Januari 2027",
-    returnDate: "30 Januari 2027",
-    airline: "Garuda Indonesia Direct Flight",
-    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Jeddah | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
-    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
-    hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
-    seatsAvailable: 35,
-    leadUstadz: "Ustadz Pembimbing Ibadah Senior El Massa & Muthawwif Mukim",
-    bonus: "Ibadah Malam Nisfu Sya'ban di Depan Ka'bah + Free City Tour Thaif + Hotel Transit PP",
-    itineraryDays: createNisfuSyabanItinerary()
-  },
 
 // Helper for 10-Day Umrah Awal Ramadan di Makkah (05 - 15 Feb 2027)
 function createRamadanItinerary() {
@@ -804,6 +652,158 @@ function createRamadanItinerary() {
     }
   ];
 }
+
+// Comprehensive Packages Database
+const ALL_PACKAGES = {
+  // 1. UMRAH SPECIAL NOVEMBER 2026
+  "november": {
+    id: "november",
+    slug: "november",
+    title: "Umrah Special November 2026 (10 Hari Tanpa Transit)",
+    shortTitle: "Umrah Special November",
+    category: "direct",
+    badge: "Paling Favorit",
+    poster: "assets/images/poster-november-reguler.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "10 Hari (03 - 13 Nov 2026)",
+    departureDate: "03 November 2026",
+    returnDate: "13 November 2026",
+    airline: "Saudia Airlines (Direct Flight / Tanpa Transit)",
+    flightRoute: "Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta (CGK)",
+    departureCity: "Jakarta (CGK) & Pangkal Pinang (PGK)",
+    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
+    seatsAvailable: 25,
+    leadUstadz: "Ustadz Pembimbing Bersertifikat Kemenag RI & Muthawwif Mukim",
+    bonus: "Free City Tour Thaif & Pabrik Parfum + Bimbingan Ibadah Sesuai Sunnah",
+    itineraryDays: createTailoredItinerary("Umrah Special November", 10, 3, 4, "Saudia Airlines Direct", true, "Kajian fiqih umrah & sunnah ihram bersama pembimbing di hotel.")
+  },
+
+  // 2. UMRAH SPECIAL BERSAMA USTADZ HANAN ATTAKI
+  "hanan-attaki": {
+    id: "hanan-attaki",
+    slug: "hanan-attaki",
+    title: "Umrah Special Bersama Ustadz Hanan Attaki",
+    shortTitle: "Umrah Ust. Hanan Attaki",
+    category: "ustadz",
+    badge: "Spesial Ustadz",
+    poster: "assets/images/poster-november-hanan-attaki.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "10 Hari (17 - 26 Nov 2026)",
+    departureDate: "17 November 2026",
+    returnDate: "26 November 2026",
+    airline: "Saudia Airlines SV821 (Landing Madinah)",
+    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
+    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
+    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5) / Pilihan Upgrade: Sofwah / Zamzam Tower (★5)",
+    seatsAvailable: 25,
+    leadUstadz: "Ustadz Hanan Attaki, Lc. (Founder Shift Pemuda Hijrah) & Muthawwif Mukim",
+    bonus: "Kajian Eksklusif Tematik di Madinah & Makkah + Free City Tour Thaif + D'Prima Hotel Transit",
+    itineraryDays: createTailoredItinerary("Umrah Ust. Hanan Attaki", 10, 3, 4, "Saudia Airlines (Landing Madinah)", true, "Kajian Khusus Tematik Bersama Ustadz Hanan Attaki di Madinah & Makkah.")
+  },
+
+  // 3. UMRAH NYAMAN AKHIR TAHUN
+  "akhir-tahun": {
+    id: "akhir-tahun",
+    slug: "akhir-tahun",
+    title: "Umrah Nyaman Akhir Tahun (Program 9 Hari)",
+    shortTitle: "Umrah Nyaman Akhir Tahun",
+    category: "akhir-tahun",
+    badge: "Akhir Tahun",
+    poster: "assets/images/poster-desember-akhir-tahun.jpg",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "9 Hari (14 - 22 Des 2026)",
+    departureDate: "14 Desember 2026",
+    returnDate: "22 Desember 2026",
+    airline: "Saudia Airlines Direct",
+    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Jeddah/Madinah | Jeddah ➔ Jakarta ➔ Pangkal Pinang",
+    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
+    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
+    hotelMakkah: "Sawaed Al Khaer (Pilihan Upgrade Bintang 5: Makkah Tower Hotel)",
+    seatsAvailable: 36,
+    leadUstadz: "Dewan Pembimbing Ibadah Senior El Massa & Muthawwif Mukim",
+    bonus: "Bonus City Tour Thaif Gratis dari El Massa + D'Prima Hotel Transit PP + Air Zamzam 5L",
+    itineraryDays: createTailoredItinerary("Umrah Nyaman Akhir Tahun", 9, 3, 3, "Saudia Airlines Direct", true, "Kajian muhasabah dan tausiyah akhir tahun di Masjid Nabawi.")
+  },
+
+  // 4. UMRAH SPECIAL BERSAMA USTADZ DR. H. MUHAMMAD KURNIA
+  "kurnia": {
+    id: "kurnia",
+    slug: "kurnia",
+    title: "Umrah Special Bersama Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag.",
+    shortTitle: "Umrah Ust. Dr. Muhammad Kurnia",
+    category: "ustadz",
+    badge: "Spesial Ustadz",
+    poster: "assets/images/poster-muhammad-kurnia.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "11 Hari (16 - 27 Mar 2027)",
+    departureDate: "16 Maret 2027",
+    returnDate: "27 Maret 2027",
+    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
+    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
+    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
+    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
+    seatsAvailable: 35,
+    leadUstadz: "Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag. & Muthawwif Mukim",
+    bonus: "Kajian Tematik Bersama Ust. Dr. Muhammad Kurnia + Free City Tour Thaif + D'Prima Hotel Transit PP",
+    itineraryDays: create11DaySyawalItinerary("Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag.")
+  },
+
+  // 5. UMRAH SAYANG ORANG TUA (11 HARI)
+  "orang-tua": {
+    id: "orang-tua",
+    slug: "orang-tua",
+    title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
+    shortTitle: "Umrah Sayang Orang Tua",
+    category: "syawal",
+    badge: "Ramah Lansia 0 km",
+    poster: "assets/images/poster-sayang-orang-tua.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "11 Hari (16 - 27 Mar 2027)",
+    departureDate: "16 Maret 2027",
+    returnDate: "27 Maret 2027",
+    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
+    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
+    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
+    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
+    hotelMakkah: "Olayan Ajyad (0 km ± 1 Menit ke Pelataran Haram)",
+    seatsAvailable: 30,
+    leadUstadz: "Tim Medis & Ustadz Pembimbing Ramah Lansia",
+    bonus: "Akses Super Dekat Khusus Lansia & Kursi Roda + Free City Tour Thaif + D'Prima Hotel Transit PP",
+    itineraryDays: create11DaySyawalItinerary("Ustadz Pembimbing Khusus Lansia")
+  },
+
+  // 6. UMRAH NISFU SYA'BAN DI MEKKAH
+  "nisfu-syaban": {
+    id: "nisfu-syaban",
+    slug: "nisfu-syaban",
+    title: "Umrah Nisfu Sya'ban di Makkah (11 Hari)",
+    shortTitle: "Umrah Nisfu Sya'ban di Makkah",
+    category: "syaban",
+    badge: "Nisfu Sya'ban",
+    poster: "assets/images/poster-nisfu-syaban.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "11 Hari (20 - 30 Jan 2027)",
+    departureDate: "20 Januari 2027",
+    returnDate: "30 Januari 2027",
+    airline: "Garuda Indonesia Direct Flight",
+    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Jeddah | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
+    departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
+    hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
+    seatsAvailable: 35,
+    leadUstadz: "Ustadz Pembimbing Ibadah Senior El Massa & Muthawwif Mukim",
+    bonus: "Ibadah Malam Nisfu Sya'ban di Depan Ka'bah + Free City Tour Thaif + Hotel Transit PP",
+    itineraryDays: createNisfuSyabanItinerary()
+  },
 
   // 7. UMRAH AWAL RAMADAN
   "ramadan": {
