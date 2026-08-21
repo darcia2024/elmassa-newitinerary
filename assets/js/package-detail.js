@@ -894,15 +894,15 @@ function createRamadanItinerary() {
     duration: "9 Hari (Akhir Juni 2027)",
     departureDate: "Akhir Juni 2027",
     returnDate: "Juli 2027",
-    airline: "Qatar Airways / Etihad Airways",
-    flightRoute: "Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta (CGK)",
-    departureCity: "Jakarta (CGK) & Pangkal Pinang (PGK)",
+    airline: "Garuda Indonesia / Saudia Airlines",
+    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
+    departureCity: "Pangkal Pinang (PGK) & Jakarta (CGK)",
     hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
     hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
-    seatsAvailable: 35,
+    seatsAvailable: 31,
     leadUstadz: "Ustadz Pembimbing Edukasi Keluarga El Massa",
     bonus: "Program Edukasi Sejarah Islam untuk Anak & Remaja + Free City Tour Thaif",
-    itineraryDays: createTailoredItinerary("Umrah Liburan Sekolah 9 Hari", 9, 3, 3, "Qatar Airways / Etihad", true, "Bimbingan manasik ramah anak dan remaja.")
+    itineraryDays: createTailoredItinerary("Umrah Liburan Sekolah 9 Hari", 9, 3, 3, "Garuda Indonesia / Saudia Airlines", true, "Bimbingan manasik ramah anak dan remaja.")
   },
 
   // 11. UMRAH LIBURAN SEKOLAH (12 HARI)
@@ -924,7 +924,7 @@ function createRamadanItinerary() {
     departureCity: "Jakarta (CGK) & Pangkal Pinang (PGK)",
     hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
     hotelMakkah: "Grand Al Massa (★5, Dekat Pelataran Haram)",
-    seatsAvailable: 35,
+    seatsAvailable: 31,
     leadUstadz: "Ustadz Pembimbing Edukasi Keluarga El Massa",
     bonus: "Waktu Ibadah Lebih Panjang 12 Hari + Bimbingan Manasik Keluarga + Free Thaif",
     itineraryDays: createTailoredItinerary("Umrah Liburan Sekolah 12 Hari", 12, 4, 5, "Qatar Airways / Etihad Airways", true, "Waktu leluasa 12 hari untuk ibadah mendalam dan edukasi keluarga muslim.")

@@ -179,8 +179,8 @@ const PACKAGES_DATA = [
     isLocked: false,
     duration: "9 Hari",
     dates: "Akhir Juni 2027",
-    airline: "Qatar Airways / Etihad Airways",
-    departure: "Jakarta (CGK) & Pangkal Pinang (PGK)",
+    airline: "Garuda Indonesia / Saudia Airlines",
+    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
     hotelMadinah: "Daar El Naeem (★5)",
     hotelMakkah: "Grand Al Massa (★5)",
     bonus: "Program Edukasi Sejarah Islam untuk Anak & Remaja + Free City Tour Thaif"
