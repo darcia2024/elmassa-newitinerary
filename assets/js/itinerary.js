@@ -1,9 +1,9 @@
 /**
- * EL MASSA TOUR & TRAVEL - OFFICIAL 10 PACKAGES CATALOG ENGINE
- * Simple Direct URLs & Editorial Design
+ * EL MASSA TOUR & TRAVEL - OFFICIAL PACKAGES CATALOG ENGINE
+ * Simple Direct URLs, Real Flyers, and Clean Editorial Design
  */
 
-// Official 10 Packages Catalog Database with Direct Clean URLs
+// Official Packages Catalog Database
 const PACKAGES_DATA = [
   {
     id: "november",
@@ -60,6 +60,42 @@ const PACKAGES_DATA = [
     bonus: "Free City Tour Thaif + D'Prima Hotel Transit PP + Air Zamzam 5L"
   },
   {
+    id: "kurnia",
+    slug: "kurnia",
+    url: "paket-kurnia",
+    title: "Umrah Special Bersama Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag.",
+    shortTitle: "Umrah Ust. Dr. Muhammad Kurnia",
+    category: "ustadz",
+    poster: "assets/images/poster-muhammad-kurnia.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "11 Hari",
+    dates: "26 Maret - 05 April 2027",
+    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
+    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
+    hotelMadinah: "Daar El Naeem (★5)",
+    hotelMakkah: "Grand Al Massa (★5)",
+    bonus: "Kajian Tematik Bersama Ust. Dr. Muhammad Kurnia + Free City Tour Thaif + D'Prima Transit PP"
+  },
+  {
+    id: "orang-tua",
+    slug: "orang-tua",
+    url: "paket-orang-tua",
+    title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
+    shortTitle: "Umrah Sayang Orang Tua",
+    category: "syawal",
+    poster: "assets/images/poster-sayang-orang-tua.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "11 Hari",
+    dates: "26 Maret - 05 April 2027",
+    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
+    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
+    hotelMadinah: "Daar El Naeem (★5)",
+    hotelMakkah: "Olayan Ajyad (0 km ± 1 menit ke Haram)",
+    bonus: "Akses Super Dekat Khusus Lansia & Kursi Roda + Free City Tour Thaif + D'Prima Transit PP"
+  },
+  {
     id: "nisfu-syaban",
     slug: "nisfu-syaban",
     url: "paket-nisfu-syaban",
@@ -94,24 +130,6 @@ const PACKAGES_DATA = [
     hotelMadinah: "Daar El Naeem (★5)",
     hotelMakkah: "Grand Al Massa (★5)",
     bonus: "Pahala Umrah Setara Ibadah Haji Bersama Nabi SAW + Free Thaif"
-  },
-  {
-    id: "orang-tua",
-    slug: "orang-tua",
-    url: "paket-orang-tua",
-    title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
-    shortTitle: "Umrah Sayang Orang Tua",
-    category: "syawal",
-    poster: "assets/images/flyer-coming-soon.svg",
-    hasFlyer: false,
-    isLocked: true,
-    duration: "10 Hari",
-    dates: "Maret 2027 (Bulan Syawal)",
-    airline: "Garuda Indonesia / Saudia Airlines",
-    departure: "Jakarta (CGK) & Pangkal Pinang (PGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Olayan Ajyad (0 km ± 1 menit ke Haram)",
-    bonus: "Akses Super Dekat Khusus Lansia & Kursi Roda + Free City Tour Thaif"
   },
   {
     id: "syawal",
