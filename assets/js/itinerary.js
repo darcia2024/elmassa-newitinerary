@@ -1,9 +1,9 @@
 /**
- * EL MASSA TOUR & TRAVEL - OFFICIAL PACKAGES CATALOG ENGINE
- * Simple Direct URLs, Real Flyers, and Clean Editorial Design
+ * EL MASSA TOUR & TRAVEL - OFFICIAL ITINERARY PORTAL ENGINE
+ * Multi-view (List/Timeline Itinerary & Grid Cards), Filter System, Live Search & Schedule Matrix
  */
 
-// Official Packages Catalog Database
+// Official Packages Database with Full Itinerary Specifications
 const PACKAGES_DATA = [
   {
     id: "november",
@@ -11,17 +11,21 @@ const PACKAGES_DATA = [
     url: "paket-november2026",
     title: "Umrah Special November 2026 (10 Hari Tanpa Transit)",
     shortTitle: "Umrah Special November",
-    category: "direct",
+    category: "november",
+    seasonBadge: "Paling Favorit",
     poster: "assets/images/poster-november-reguler.png",
     hasFlyer: true,
     isLocked: false,
     duration: "10 Hari",
+    departureDay: "03 – 13",
+    departureMonthYear: "NOV 2026",
     dates: "03 - 13 November 2026",
     airline: "Saudia Airlines (Direct / Tanpa Transit)",
-    departure: "Jakarta (CGK) & Pangkal Pinang (PGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Grand Al Massa (★5)",
-    bonus: "Free City Tour Thaif & Pabrik Parfum + Bimbingan Sunnah"
+    flightRoute: "Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta (CGK)",
+    departureCity: "Pangkal Pinang & Jakarta",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
+    bonus: "Free City Tour Thaif & Pabrik Parfum + Bimbingan Sesuai Sunnah"
   },
   {
     id: "hanan-attaki",
@@ -30,14 +34,18 @@ const PACKAGES_DATA = [
     title: "Umrah Special Bersama Ustadz Hanan Attaki",
     shortTitle: "Umrah Ust. Hanan Attaki",
     category: "ustadz",
+    seasonBadge: "Spesial Ustadz",
     poster: "assets/images/poster-november-hanan-attaki.png",
     hasFlyer: true,
     isLocked: false,
-    duration: "10 Hari (Landing Madinah)",
+    duration: "10 Hari",
+    departureDay: "17 – 26",
+    departureMonthYear: "NOV 2026",
     dates: "17 - 26 November 2026",
-    airline: "Saudia Airlines (Landing Madinah SV821)",
-    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
+    airline: "Saudia Airlines (SV821 Landing Madinah)",
+    flightRoute: "Pangkal Pinang ➔ Jakarta ➔ Madinah (MED) | Jeddah ➔ Jakarta ➔ PGK",
+    departureCity: "Pangkal Pinang & Jakarta",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
     hotelMakkah: "Grand Al Massa / Upgrade Sofwah/Zamzam Tower (★5)",
     bonus: "Kajian Eksklusif Tematik di Madinah & Makkah + Free Thaif + D'Prima Transit"
   },
@@ -48,52 +56,20 @@ const PACKAGES_DATA = [
     title: "Umrah Nyaman Akhir Tahun (Program 9 Hari)",
     shortTitle: "Umrah Nyaman Akhir Tahun",
     category: "akhir-tahun",
+    seasonBadge: "Akhir Tahun",
     poster: "assets/images/poster-desember-akhir-tahun.jpg",
     hasFlyer: true,
     isLocked: false,
     duration: "9 Hari",
+    departureDay: "14 – 22",
+    departureMonthYear: "DES 2026",
     dates: "14 - 22 Desember 2026",
-    airline: "Saudia Airlines Direct",
-    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Sawaed Al Khaer (Upgrade ★5: Makkah Tower Hotel)",
-    bonus: "Free City Tour Thaif + D'Prima Hotel Transit PP + Air Zamzam 5L"
-  },
-  {
-    id: "ustadkurnia",
-    slug: "ustadkurnia",
-    url: "paket-ustadkurnia",
-    title: "Umrah Special Bersama Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag.",
-    shortTitle: "Umrah Ust. Dr. Muhammad Kurnia",
-    category: "ustadz",
-    poster: "assets/images/poster-muhammad-kurnia.png",
-    hasFlyer: true,
-    isLocked: false,
-    duration: "11 Hari",
-    dates: "16 - 27 Maret 2027",
-    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
-    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Grand Al Massa (★5)",
-    bonus: "Kajian Tematik Bersama Ust. Dr. Muhammad Kurnia + Free City Tour Thaif + D'Prima Transit PP"
-  },
-  {
-    id: "orang-tua",
-    slug: "orang-tua",
-    url: "paket-orang-tua",
-    title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
-    shortTitle: "Umrah Sayang Orang Tua",
-    category: "syawal",
-    poster: "assets/images/poster-sayang-orang-tua.png",
-    hasFlyer: true,
-    isLocked: false,
-    duration: "11 Hari",
-    dates: "16 - 27 Maret 2027",
-    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
-    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Olayan Ajyad (0 km ± 1 menit ke Haram)",
-    bonus: "Akses Super Dekat Khusus Lansia & Kursi Roda + Free City Tour Thaif + D'Prima Transit PP"
+    airline: "Saudia Airlines Direct Flight",
+    flightRoute: "Pangkal Pinang ➔ Jakarta ➔ Jeddah/Madinah | Jeddah ➔ Jakarta ➔ PGK",
+    departureCity: "Pangkal Pinang & Jakarta",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Sawaed Al Khaer (Pilihan Upgrade ★5: Makkah Tower)",
+    bonus: "Bonus Free City Tour Thaif + D'Prima Hotel Transit PP + Air Zamzam 5L"
   },
   {
     id: "nisfu-syaban",
@@ -102,16 +78,20 @@ const PACKAGES_DATA = [
     title: "Umrah Nisfu Sya'ban di Makkah (11 Hari)",
     shortTitle: "Umrah Nisfu Sya'ban di Makkah",
     category: "syaban",
+    seasonBadge: "Nisfu Sya'ban",
     poster: "assets/images/poster-nisfu-syaban.png",
     hasFlyer: true,
     isLocked: false,
     duration: "11 Hari",
+    departureDay: "20 – 30",
+    departureMonthYear: "JAN 2027",
     dates: "20 - 30 Januari 2027",
     airline: "Garuda Indonesia Direct Flight",
-    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Grand Al Massa (★5)",
-    bonus: "Ibadah Malam Nisfu Sya'ban di Depan Ka'bah + Free City Tour Thaif + Hotel Transit PP"
+    flightRoute: "Pangkal Pinang ➔ Jakarta ➔ Jeddah | Jeddah ➔ Jakarta ➔ PGK",
+    departureCity: "Pangkal Pinang & Jakarta",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
+    bonus: "Ibadah Malam Nisfu Sya'ban di Ka'bah + Free City Tour Thaif + Hotel Transit PP"
   },
   {
     id: "ramadan",
@@ -119,17 +99,65 @@ const PACKAGES_DATA = [
     url: "paket-ramadan",
     title: "Umrah Istimewa Awal Ramadan di Makkah (10 Hari)",
     shortTitle: "Umrah Awal Ramadan di Makkah",
-    category: "ramadan",
+    category: "ramadan-syawal",
+    seasonBadge: "Awal Ramadan",
     poster: "assets/images/poster-ramadan.png",
     hasFlyer: true,
     isLocked: false,
     duration: "10 Hari",
+    departureDay: "05 – 15",
+    departureMonthYear: "FEB 2027",
     dates: "05 - 15 Februari 2027",
     airline: "Saudia Airlines (SV821 / SV826)",
-    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Grand Al Massa (★5)",
+    flightRoute: "Pangkal Pinang ➔ Jakarta ➔ Jeddah/Madinah | Jeddah ➔ Jakarta ➔ PGK",
+    departureCity: "Pangkal Pinang & Jakarta",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
     bonus: "Pahala Umrah Ramadan Setara Haji + Free City Tour Thaif + D'Prima Transit PP"
+  },
+  {
+    id: "ustadkurnia",
+    slug: "ustadkurnia",
+    url: "paket-ustadkurnia",
+    title: "Umrah Special Bersama Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag.",
+    shortTitle: "Umrah Ust. Dr. Muhammad Kurnia",
+    category: "ustadz",
+    seasonBadge: "Spesial Ustadz",
+    poster: "assets/images/poster-muhammad-kurnia.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "11 Hari",
+    departureDay: "16 – 27",
+    departureMonthYear: "MAR 2027",
+    dates: "16 - 27 Maret 2027",
+    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
+    flightRoute: "Pangkal Pinang ➔ Jakarta ➔ Madinah (MED) | Jeddah ➔ Jakarta ➔ PGK",
+    departureCity: "Pangkal Pinang & Jakarta",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
+    bonus: "Kajian Tematik Bersama Ust. Dr. Muhammad Kurnia + Free Thaif + D'Prima Transit PP"
+  },
+  {
+    id: "orang-tua",
+    slug: "orang-tua",
+    url: "paket-orang-tua",
+    title: "Umrah Sayang Orang Tua (Fasilitas 0 km Dekat Haram)",
+    shortTitle: "Umrah Sayang Orang Tua",
+    category: "ramadan-syawal",
+    seasonBadge: "Ramah Lansia 0 km",
+    poster: "assets/images/poster-sayang-orang-tua.png",
+    hasFlyer: true,
+    isLocked: false,
+    duration: "11 Hari",
+    departureDay: "16 – 27",
+    departureMonthYear: "MAR 2027",
+    dates: "16 - 27 Maret 2027",
+    airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
+    flightRoute: "Pangkal Pinang ➔ Jakarta ➔ Madinah (MED) | Jeddah ➔ Jakarta ➔ PGK",
+    departureCity: "Pangkal Pinang & Jakarta",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Olayan Ajyad (0 km ± 1 menit ke Pelataran Haram)",
+    bonus: "Akses Super Dekat Khusus Lansia & Kursi Roda + Free Thaif + D'Prima Transit PP"
   },
   {
     id: "syawal",
@@ -137,16 +165,20 @@ const PACKAGES_DATA = [
     url: "paket-syawal",
     title: "Umrah Lebih Nyaman Syawal (Program 9 & 12 Hari)",
     shortTitle: "Umrah Nyaman Syawal",
-    category: "syawal",
+    category: "ramadan-syawal",
+    seasonBadge: "Bulan Syawal",
     poster: "assets/images/poster-nyaman-syawal.png",
     hasFlyer: true,
     isLocked: false,
     duration: "9 Hari / 12 Hari",
-    dates: "Maret 2027 (Bulan Syawal)",
+    departureDay: "Syawal",
+    departureMonthYear: "MAR 2027",
+    dates: "Maret 2027 (Bulan Syawal 1448 H)",
     airline: "Saudia Airlines / Garuda Indonesia",
-    departure: "Jakarta (CGK) & Pangkal Pinang (PGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Grand Al Massa (★5)",
+    flightRoute: "Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta (CGK)",
+    departureCity: "Jakarta & Pangkal Pinang",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
     bonus: "Suasana Hari Raya Syawal di Depan Ka'bah + Free City Tour Thaif"
   },
   {
@@ -155,16 +187,20 @@ const PACKAGES_DATA = [
     url: "paket-muharram",
     title: "Umrah Muharram Awal Musim Baru 1449 H",
     shortTitle: "Umrah Muharram Awal Musim",
-    category: "awal-musim",
+    category: "liburan",
+    seasonBadge: "Musim Baru 1449 H",
     poster: "assets/images/poster-muharram-awal-musim.png",
     hasFlyer: true,
     isLocked: false,
     duration: "9 Hari",
+    departureDay: "Awal",
+    departureMonthYear: "JUN 2027",
     dates: "Awal Juni 2027 (Tahun Baru Hijriah)",
     airline: "Saudia Airlines / Garuda Indonesia",
-    departure: "Jakarta (CGK) & Pangkal Pinang (PGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Grand Al Massa (★5)",
+    flightRoute: "Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta (CGK)",
+    departureCity: "Jakarta & Pangkal Pinang",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
     bonus: "Pembukaan Musim Baru Umrah 1449 H yang Tenang & Khusyuk + Free Thaif"
   },
   {
@@ -174,15 +210,19 @@ const PACKAGES_DATA = [
     title: "Umrah Liburan Sekolah (Program 9 Hari)",
     shortTitle: "Umrah Liburan Sekolah 9 Hari",
     category: "liburan",
+    seasonBadge: "Liburan Sekolah",
     poster: "assets/images/poster-liburan-sekolah-9h.png",
     hasFlyer: true,
     isLocked: false,
     duration: "9 Hari",
+    departureDay: "Akhir",
+    departureMonthYear: "JUN 2027",
     dates: "Akhir Juni 2027",
     airline: "Garuda Indonesia / Saudia Airlines",
-    departure: "Pangkal Pinang (PGK) & Jakarta (CGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Grand Al Massa (★5)",
+    flightRoute: "Pangkal Pinang ➔ Jakarta ➔ Madinah/Jeddah | Jeddah ➔ Jakarta ➔ PGK",
+    departureCity: "Pangkal Pinang & Jakarta",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
     bonus: "Program Edukasi Sejarah Islam untuk Anak & Remaja + Free City Tour Thaif"
   },
   {
@@ -192,212 +232,357 @@ const PACKAGES_DATA = [
     title: "Umrah Liburan Sekolah (Program 12 Hari Lengkap)",
     shortTitle: "Umrah Liburan Sekolah 12 Hari",
     category: "liburan",
+    seasonBadge: "Liburan 12 Hari",
     poster: "assets/images/poster-liburan-sekolah-12h.png",
     hasFlyer: true,
     isLocked: false,
     duration: "12 Hari",
+    departureDay: "Akhir",
+    departureMonthYear: "JUN 2027",
     dates: "Akhir Juni 2027",
     airline: "Qatar Airways / Etihad Airways",
-    departure: "Jakarta (CGK) & Pangkal Pinang (PGK)",
-    hotelMadinah: "Daar El Naeem (★5)",
-    hotelMakkah: "Grand Al Massa (★5)",
+    flightRoute: "Jakarta (CGK) ➔ Doha/Abu Dhabi ➔ Madinah | Jeddah ➔ CGK",
+    departureCity: "Jakarta & Pangkal Pinang",
+    hotelMadinah: "Daar El Naeem (★5, 50m Nabawi)",
+    hotelMakkah: "Grand Al Massa (★5, Dekat Haram)",
     bonus: "Waktu Ibadah Lebih Panjang 12 Hari + Bimbingan Manasik Keluarga + Free Thaif"
   }
 ];
 
-// DOM Ready
+// Current State
+let currentViewMode = "list"; // "list" (default) or "grid"
+let currentFilteredData = PACKAGES_DATA;
+
+// DOM Initialization
 document.addEventListener("DOMContentLoaded", () => {
-  renderPackageCards(PACKAGES_DATA);
+  renderItineraryPackages(currentFilteredData, currentViewMode);
+  renderScheduleSummaryTable(PACKAGES_DATA);
+  setupViewModeSwitching();
   setupCategoryFilter();
   setupLiveSearch();
-  setupWhatsAppDirect();
+  setupWhatsAppConsultation();
   if (window.lucide) {
     lucide.createIcons();
   }
 });
 
-// Render Main Package Cards
-function renderPackageCards(packages) {
+// Render Main Itinerary Packages Container (List or Grid)
+function renderItineraryPackages(packages, mode = "list") {
   const container = document.getElementById("packages-grid-container");
+  const countBadge = document.getElementById("itinerary-count-badge");
   if (!container) return;
+
+  if (countBadge) {
+    countBadge.textContent = `Menampilkan ${packages.length} Jadwal`;
+  }
 
   if (packages.length === 0) {
     container.innerHTML = `
-      <div class="col-span-full text-center py-16 bg-white rounded-3xl border border-[#f3e8ee]">
+      <div class="text-center py-16 bg-white rounded-3xl border border-[#f3e8ee] p-6">
         <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-[#fff0f5] flex items-center justify-center text-[#d83b7d]">
           <i data-lucide="search-x" class="w-6 h-6 stroke-[1.8]"></i>
         </div>
-        <h4 class="text-base font-bold text-[#3b2216]">Paket tidak ditemukan</h4>
-        <p class="text-xs text-[#765039] mt-1">Coba kata kunci lain atau pilih tab filter 'Semua'.</p>
+        <h4 class="text-base font-bold text-[#3b2216]">Jadwal Itinerary Tidak Ditemukan</h4>
+        <p class="text-xs text-[#765039] mt-1">Coba gunakan kata kunci pencarian lain atau klik tab 'Semua Jadwal'.</p>
       </div>
     `;
     if (window.lucide) lucide.createIcons();
     return;
   }
 
-  let html = '';
-  packages.forEach((pkg) => {
-    if (pkg.isLocked) {
-      // Locked Card
+  if (mode === "list") {
+    // Mode Daftar / Timeline Itinerary
+    container.className = "space-y-4 sm:space-y-5";
+    let html = "";
+    packages.forEach(pkg => {
+      const targetUrl = pkg.url || `paket-detail.html?slug=${pkg.slug}`;
       html += `
-        <div class="elm-white-card p-4 sm:p-5 flex flex-col justify-between select-none opacity-90 border border-[#f0e8eb] cursor-default">
+        <div class="itinerary-row-card p-4 sm:p-5 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 sm:gap-6 group">
           
-          <div>
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#faf7f5] mb-4 border border-[#f0e8eb]">
-              <img src="${pkg.poster}" alt="${pkg.title}" class="w-full h-full object-cover" onerror="this.src='assets/images/flyer-coming-soon.svg'">
+          <!-- Left: Date Block & Flyer Preview Thumbnail -->
+          <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+            
+            <!-- Date Block -->
+            <div class="itinerary-date-block w-24 sm:w-28 py-3 px-2 text-center rounded-2xl flex flex-col items-center justify-center flex-shrink-0 shadow-inner">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#d83b7d]">${pkg.departureMonthYear}</span>
+              <span class="text-lg sm:text-xl font-black text-[#3b2216] tracking-tight tabular my-0.5">${pkg.departureDay}</span>
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#3b2216] text-white">${pkg.duration}</span>
             </div>
+            
+            <!-- Flyer Thumbnail Preview -->
+            <a href="${targetUrl}" class="relative w-20 sm:w-24 h-24 sm:h-28 rounded-xl overflow-hidden bg-[#faf7f5] border border-[#f0e8eb] flex-shrink-0 block shadow-sm">
+              <img src="${pkg.poster}" alt="${pkg.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='assets/images/flyer-coming-soon.svg'">
+              <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+            </a>
 
-            <div class="text-xs font-semibold text-[#765039] mb-1.5 flex items-center justify-between">
-              <span>${pkg.duration}</span>
-              <span class="text-slate-400 font-medium text-[11px]">${pkg.dates}</span>
-            </div>
-
-            <h3 class="text-base font-bold text-[#3b2216] leading-snug line-clamp-2">
-              ${pkg.title}
-            </h3>
-
-            <div class="mt-3.5 space-y-1.5 text-xs text-[#765039]">
-              <div class="flex items-center gap-2">
-                <span class="text-slate-400 text-[11px]">Maskapai:</span>
-                <span class="font-medium text-[#3b2216] truncate">${pkg.airline}</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="text-slate-400 text-[11px]">Hotel:</span>
-                <span class="font-medium text-[#3b2216] truncate">${pkg.hotelMakkah}</span>
-              </div>
-            </div>
           </div>
 
-          <div class="mt-5 pt-3.5 border-t border-[#f3e8ee] flex items-center justify-between text-xs">
-            <span class="text-[11px] text-slate-400 font-medium">${pkg.departure}</span>
-            <span class="inline-flex items-center gap-1.5 text-slate-500 font-semibold text-xs py-1 px-3 rounded-full bg-[#faf7f5] border border-[#f0e8eb]">
-              <i data-lucide="lock" class="w-3.5 h-3.5 stroke-[2] text-[#765039]"></i>
-              <span>Segera Rilis</span>
-            </span>
+          <!-- Middle: Rich Schedule & Experience Details -->
+          <div class="flex-1 min-w-0 space-y-2">
+            
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-[#fff0f5] text-[#d83b7d] border border-[#fce7f3]">
+                ${pkg.seasonBadge}
+              </span>
+              <span class="text-[11px] text-slate-500 font-medium flex items-center gap-1">
+                <i data-lucide="map-pin" class="w-3 h-3 text-[#d83b7d]"></i>
+                ${pkg.departureCity}
+              </span>
+              <span class="text-[11px] text-slate-400 font-medium">
+                • ${pkg.dates}
+              </span>
+            </div>
+
+            <h3 class="text-base sm:text-lg font-extrabold text-[#3b2216] group-hover:text-[#d83b7d] transition-colors leading-snug">
+              <a href="${targetUrl}">${pkg.title}</a>
+            </h3>
+
+            <!-- Route Pipeline Pill -->
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#faf7f5] border border-[#f0e8eb] text-[11px] text-[#765039] font-medium max-w-full overflow-hidden truncate">
+              <i data-lucide="plane" class="w-3 h-3 text-[#d83b7d] flex-shrink-0"></i>
+              <span class="truncate">${pkg.flightRoute}</span>
+            </div>
+
+            <!-- Key Specifications Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs text-[#765039] pt-1">
+              <div class="flex items-center gap-1.5 truncate">
+                <span class="text-slate-400 font-semibold text-[11px] flex-shrink-0">Maskapai:</span>
+                <span class="font-medium text-[#3b2216] truncate">${pkg.airline}</span>
+              </div>
+              <div class="flex items-center gap-1.5 truncate">
+                <span class="text-slate-400 font-semibold text-[11px] flex-shrink-0">Hotel ★5:</span>
+                <span class="font-medium text-[#3b2216] truncate">${pkg.hotelMakkah} / ${pkg.hotelMadinah}</span>
+              </div>
+              <div class="flex items-center gap-1.5 sm:col-span-2 truncate text-[#d83b7d] font-semibold text-[11px] pt-0.5">
+                <i data-lucide="sparkles" class="w-3 h-3 flex-shrink-0"></i>
+                <span class="truncate">${pkg.bonus}</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Action CTA Buttons -->
+          <div class="flex flex-col sm:flex-row lg:flex-col items-stretch justify-center gap-2 flex-shrink-0 pt-3 lg:pt-0 border-t lg:border-t-0 border-[#f3e8ee]">
+            <a href="${targetUrl}" class="px-4 py-2.5 rounded-full bg-[#3b2216] hover:bg-[#d83b7d] text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 text-center shadow-sm">
+              <span>Buka Detail Itinerary</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+            </a>
+            <button class="btn-wa-single px-4 py-2 rounded-full bg-white hover:bg-[#fff0f5] text-[#765039] hover:text-[#d83b7d] border border-[#f0e8eb] text-xs font-semibold transition-all flex items-center justify-center gap-1.5" data-title="${pkg.title}">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-[#25D366] stroke-[2]"></i>
+              <span>Konsultasi Jadwal Ini</span>
+            </button>
           </div>
 
         </div>
       `;
-    } else {
-      // Unlocked Official Card with clean direct URL
+    });
+    container.innerHTML = html;
+  } else {
+    // Mode Grid Visual
+    container.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6";
+    let html = "";
+    packages.forEach(pkg => {
       const targetUrl = pkg.url || `paket-detail.html?slug=${pkg.slug}`;
       html += `
-        <a href="${targetUrl}" class="elm-white-card p-4 sm:p-5 flex flex-col justify-between group transition-all duration-300 block select-none">
+        <div class="elm-white-card p-4 sm:p-5 flex flex-col justify-between group transition-all duration-300 select-none">
           
           <div>
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#faf7f5] mb-4 border border-[#f0e8eb]">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#faf7f5] mb-3.5 border border-[#f0e8eb]">
               <img src="${pkg.poster}" alt="${pkg.title}" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" onerror="this.src='assets/images/flyer-coming-soon.svg'">
+              <div class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-white/95 backdrop-blur-md text-[#d83b7d] shadow-sm">
+                ${pkg.seasonBadge}
+              </div>
+              <div class="absolute bottom-2.5 right-2.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#3b2216]/90 text-white backdrop-blur-md">
+                ${pkg.duration}
+              </div>
             </div>
 
-            <div class="text-xs font-semibold text-[#d83b7d] mb-1.5 flex items-center justify-between">
-              <span>${pkg.duration}</span>
-              <span class="text-[#765039] font-medium text-[11px]">${pkg.dates}</span>
+            <div class="text-xs font-semibold text-[#d83b7d] mb-1 flex items-center justify-between">
+              <span>${pkg.dates}</span>
             </div>
 
             <h3 class="text-base font-bold text-[#3b2216] group-hover:text-[#d83b7d] transition-colors leading-snug line-clamp-2">
-              ${pkg.title}
+              <a href="${targetUrl}">${pkg.title}</a>
             </h3>
 
-            <div class="mt-3.5 space-y-1.5 text-xs text-[#765039]">
+            <div class="mt-3 space-y-1.5 text-xs text-[#765039]">
               <div class="flex items-center gap-2">
                 <span class="text-slate-400 text-[11px]">Maskapai:</span>
                 <span class="font-medium text-[#3b2216] truncate">${pkg.airline}</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-slate-400 text-[11px]">Hotel:</span>
+                <span class="text-slate-400 text-[11px]">Hotel ★5:</span>
                 <span class="font-medium text-[#3b2216] truncate">${pkg.hotelMakkah}</span>
               </div>
             </div>
           </div>
 
-          <div class="mt-5 pt-3.5 border-t border-[#f3e8ee] flex items-center justify-between">
-            <span class="text-[11px] text-slate-500 font-medium">${pkg.departure}</span>
-            <span class="text-xs font-bold text-[#d83b7d] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-              Lihat Rute <i data-lucide="arrow-right" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-            </span>
+          <div class="mt-4 pt-3.5 border-t border-[#f3e8ee] flex items-center justify-between">
+            <span class="text-[11px] text-slate-500 font-medium">${pkg.departureCity}</span>
+            <a href="${targetUrl}" class="text-xs font-bold text-[#d83b7d] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              Detail Rute <i data-lucide="arrow-right" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+            </a>
           </div>
 
-        </a>
+        </div>
       `;
-    }
-  });
+    });
+    container.innerHTML = html;
+  }
 
-  container.innerHTML = html;
   if (window.lucide) {
     lucide.createIcons();
   }
 }
 
+// Render Summary Table at Bottom
+function renderScheduleSummaryTable(packages) {
+  const tableBody = document.getElementById("itinerary-table-body");
+  if (!tableBody) return;
+
+  let html = "";
+  packages.forEach((pkg, index) => {
+    const targetUrl = pkg.url || `paket-detail.html?slug=${pkg.slug}`;
+    const bgRow = index % 2 === 0 ? "bg-white" : "bg-[#faf7f5]";
+    html += `
+      <tr class="${bgRow} hover:bg-[#fff0f5] transition-colors">
+        <td class="py-3 px-4 font-bold text-[#3b2216]">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#d83b7d]"></span>
+            <span>${pkg.shortTitle}</span>
+          </div>
+        </td>
+        <td class="py-3 px-4 font-medium text-[#765039] whitespace-nowrap">${pkg.dates}</td>
+        <td class="py-3 px-4 font-semibold text-[#3b2216] whitespace-nowrap">${pkg.duration}</td>
+        <td class="py-3 px-4 text-slate-600">${pkg.airline}</td>
+        <td class="py-3 px-4 text-slate-600">${pkg.hotelMakkah} / ${pkg.hotelMadinah}</td>
+        <td class="py-3 px-4 text-center whitespace-nowrap">
+          <a href="${targetUrl}" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#3b2216] hover:bg-[#d83b7d] text-white text-[11px] font-bold transition-all">
+            <span>Buka Itinerary</span>
+            <i data-lucide="arrow-right" class="w-3 h-3 stroke-[2.5]"></i>
+          </a>
+        </td>
+      </tr>
+    `;
+  });
+
+  tableBody.innerHTML = html;
+}
+
+// View Mode Switching (List vs Grid)
+function setupViewModeSwitching() {
+  const btnList = document.getElementById("view-mode-list");
+  const btnGrid = document.getElementById("view-mode-grid");
+
+  if (btnList && btnGrid) {
+    btnList.addEventListener("click", () => {
+      currentViewMode = "list";
+      btnList.classList.add("active", "bg-[#3b2216]", "text-white");
+      btnList.classList.remove("text-[#765039]");
+      btnGrid.classList.remove("active", "bg-[#3b2216]", "text-white");
+      btnGrid.classList.add("text-[#765039]");
+      renderItineraryPackages(currentFilteredData, currentViewMode);
+    });
+
+    btnGrid.addEventListener("click", () => {
+      currentViewMode = "grid";
+      btnGrid.classList.add("active", "bg-[#3b2216]", "text-white");
+      btnGrid.classList.remove("text-[#765039]");
+      btnList.classList.remove("active", "bg-[#3b2216]", "text-white");
+      btnList.classList.add("text-[#765039]");
+      renderItineraryPackages(currentFilteredData, currentViewMode);
+    });
+  }
+}
+
 // Category Filter Handling
 function setupCategoryFilter() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll(".filter-btn");
   filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
       filterBtns.forEach(b => {
-        b.classList.remove('active', 'bg-[#3b2216]', 'text-white');
-        b.classList.add('bg-white', 'text-[#3b2216]');
+        b.classList.remove("active", "bg-[#3b2216]", "text-white");
+        b.classList.add("bg-white", "text-[#3b2216]");
       });
-      btn.classList.add('active', 'bg-[#3b2216]', 'text-white');
-      btn.classList.remove('bg-white', 'text-[#3b2216]');
+      btn.classList.add("active", "bg-[#3b2216]", "text-white");
+      btn.classList.remove("bg-white", "text-[#3b2216]");
 
-      const filterVal = btn.getAttribute('data-filter');
-      let filtered = PACKAGES_DATA;
+      const filterVal = btn.getAttribute("data-filter");
 
-      if (filterVal === 'direct') {
-        filtered = PACKAGES_DATA.filter(p => p.category === 'direct');
-      } else if (filterVal === 'ustadz') {
-        filtered = PACKAGES_DATA.filter(p => p.category === 'ustadz');
-      } else if (filterVal === 'akhir-tahun') {
-        filtered = PACKAGES_DATA.filter(p => p.category === 'akhir-tahun');
-      } else if (filterVal === 'syawal' || filterVal === 'ramadan' || filterVal === 'syaban') {
-        filtered = PACKAGES_DATA.filter(p => p.category === 'syawal' || p.category === 'ramadan' || p.category === 'syaban');
-      } else if (filterVal === 'liburan') {
-        filtered = PACKAGES_DATA.filter(p => p.category === 'liburan');
+      if (filterVal === "all") {
+        currentFilteredData = PACKAGES_DATA;
+      } else if (filterVal === "ustadz") {
+        currentFilteredData = PACKAGES_DATA.filter(p => p.category === "ustadz");
+      } else if (filterVal === "november") {
+        currentFilteredData = PACKAGES_DATA.filter(p => p.category === "november" || p.id === "hanan-attaki");
+      } else if (filterVal === "akhir-tahun") {
+        currentFilteredData = PACKAGES_DATA.filter(p => p.category === "akhir-tahun");
+      } else if (filterVal === "syaban") {
+        currentFilteredData = PACKAGES_DATA.filter(p => p.category === "syaban");
+      } else if (filterVal === "ramadan-syawal") {
+        currentFilteredData = PACKAGES_DATA.filter(p => p.category === "ramadan-syawal" || p.id === "ustadkurnia");
+      } else if (filterVal === "liburan") {
+        currentFilteredData = PACKAGES_DATA.filter(p => p.category === "liburan");
       }
 
-      renderPackageCards(filtered);
+      renderItineraryPackages(currentFilteredData, currentViewMode);
     });
   });
 }
 
 // Live Search Handling
 function setupLiveSearch() {
-  const searchInput = document.getElementById('itinerary-search');
+  const searchInput = document.getElementById("itinerary-search");
   if (!searchInput) return;
 
-  searchInput.addEventListener('input', (e) => {
+  searchInput.addEventListener("input", (e) => {
     const q = e.target.value.toLowerCase().trim();
     if (!q) {
-      renderPackageCards(PACKAGES_DATA);
+      currentFilteredData = PACKAGES_DATA;
+      renderItineraryPackages(currentFilteredData, currentViewMode);
       return;
     }
 
-    const filtered = PACKAGES_DATA.filter(pkg => {
+    currentFilteredData = PACKAGES_DATA.filter(pkg => {
       return (
         pkg.title.toLowerCase().includes(q) ||
         pkg.shortTitle.toLowerCase().includes(q) ||
-        pkg.slug.toLowerCase().includes(q) ||
-        (pkg.url && pkg.url.toLowerCase().includes(q)) ||
+        pkg.dates.toLowerCase().includes(q) ||
+        pkg.departureMonthYear.toLowerCase().includes(q) ||
         pkg.airline.toLowerCase().includes(q) ||
-        pkg.departure.toLowerCase().includes(q) ||
+        pkg.flightRoute.toLowerCase().includes(q) ||
+        pkg.departureCity.toLowerCase().includes(q) ||
         pkg.hotelMakkah.toLowerCase().includes(q) ||
         pkg.hotelMadinah.toLowerCase().includes(q) ||
         pkg.bonus.toLowerCase().includes(q)
       );
     });
 
-    renderPackageCards(filtered);
+    renderItineraryPackages(currentFilteredData, currentViewMode);
   });
 }
 
-// Direct WhatsApp Consultation
-function setupWhatsAppDirect() {
-  document.querySelectorAll('.btn-share-wa').forEach(btn => {
-    btn.addEventListener('click', () => {
+// WhatsApp Direct Consultation Handling
+function setupWhatsAppConsultation() {
+  // General button
+  document.querySelectorAll(".btn-share-wa").forEach(btn => {
+    btn.addEventListener("click", () => {
       const text = encodeURIComponent(
-        `Assalamu'alaikum Warahmatullahi Wabarakatuh,\n\nSaya ingin konsultasi rincian itinerary & jadwal keberangkatan untuk paket Umrah Resmi El Massa Tour & Travel. Mohon info lengkapnya. Terima kasih!`
+        `Assalamu'alaikum Warahmatullahi Wabarakatuh,\n\nSaya ingin konsultasi mengenai jadwal dan rincian itinerary perjalanan Umrah Resmi El Massa Tour & Travel. Mohon dibantu informasi selengkapnya. Terima kasih!`
       );
-      window.open(`https://wa.me/6281171715125?text=${text}`, '_blank');
+      window.open(`https://wa.me/6281171715125?text=${text}`, "_blank");
     });
+  });
+
+  // Specific package button in list view
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn-wa-single");
+    if (btn) {
+      const pkgTitle = btn.getAttribute("data-title") || "Umrah El Massa";
+      const text = encodeURIComponent(
+        `Assalamu'alaikum Warahmatullahi Wabarakatuh,\n\nSaya tertarik dengan jadwal dan rangkaian perjalanan *${pkgTitle}* di El Massa Tour & Travel. Mohon info ketersediaan seat dan rincian perjalanannya. Terima kasih!`
+      );
+      window.open(`https://wa.me/6281171715125?text=${text}`, "_blank");
+    }
   });
 }

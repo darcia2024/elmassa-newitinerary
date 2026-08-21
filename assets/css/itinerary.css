@@ -84,6 +84,39 @@ body {
   }
 }
 
+/* Itinerary List Row Card */
+.itinerary-row-card {
+  background-color: #FFFFFF;
+  border: 1px solid #f0e8eb;
+  border-radius: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(59, 34, 22, 0.03);
+}
+
+@media (hover: hover) {
+  .itinerary-row-card:hover {
+    border-color: #d83b7d;
+    box-shadow: 0 12px 30px -8px rgba(216, 59, 125, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+/* Date Badge Block */
+.itinerary-date-block {
+  background: linear-gradient(145deg, #fff7f9 0%, #fff0f5 100%);
+  border: 1px solid #fce7f3;
+  border-radius: 1rem;
+}
+
+/* View Mode Buttons */
+.view-mode-btn {
+  transition: all 0.2s ease;
+}
+.view-mode-btn.active {
+  background-color: #3b2216;
+  color: #ffffff;
+}
+
 /* Pill buttons */
 .elm-pill-dark {
   background-color: #3b2216;

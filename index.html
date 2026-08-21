@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <meta name="theme-color" content="#d83b7d">
-  <title>El Massa Tour & Travel - Pilihan Paket Umrah & Itinerary Resmi 1448 H</title>
+  <title>Portal Itinerary Resmi Umrah El Massa - Jadwal & Rangkaian Perjalanan 1448 H</title>
   
   <!-- Meta SEO -->
-  <meta name="description" content="Katalog resmi paket Umrah El Massa Tour & Travel: Program 9, 10, 11, dan 12 Hari bersama Ustadz Hanan Attaki, Umrah Akhir Tahun, Ramadan, Syawal, dan Liburan Sekolah. Fasilitas Hotel Bintang 5 dekat pelataran dan Free City Tour Thaif.">
+  <meta name="description" content="Daftar resmi itinerary perjalanan Umrah El Massa Tour & Travel: Jadwal keberangkatan, rundown harian Madinah & Makkah, rute penerbangan Saudia & Garuda, akomodasi hotel bintang 5 dekat masjid, dan bimbingan manasik sesuai sunnah.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -46,39 +46,50 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/itinerary.css">
 </head>
-<body class="bg-[#fdfaf8] text-[#4a2e22] antialiased selection:bg-[#f9dbe8] selection:text-[#3b2216]">
+<body class="bg-[#fdfaf8] text-[#4a2e22] antialiased selection:bg-[#f9dbe8] selection:text-[#3b2216] pb-24 lg:pb-0">
 
   <!-- ========================================================================= -->
   <!-- TOP NAVBAR -->
   <!-- ========================================================================= -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#f3e8ee] transition-all">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-3 sm:gap-4">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-3 sm:gap-4">
       
-      <!-- Left: Hamburger Menu -->
-      <div class="flex items-center gap-3">
-        <button class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl hover:bg-pink-50 active:bg-pink-100 flex items-center justify-center text-[#3b2216] transition-colors" aria-label="Menu">
-          <i data-lucide="menu" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]"></i>
-        </button>
-      </div>
-
-      <!-- Center: Official El Massa Logo -->
-      <a href="index.html" class="flex flex-col items-center group">
-        <div class="flex items-center gap-2">
-          <img src="assets/images/logo.png" alt="Logo El Massa" class="h-8 sm:h-9 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-          <div class="hidden items-center gap-1.5 font-bold text-base sm:text-lg text-[#3b2216]">
-            <i data-lucide="compass" class="w-5 h-5 text-[#d83b7d] stroke-[2]"></i> EL MASSA
-          </div>
+      <!-- Left: Logo & Portal Tag -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <img src="assets/images/logo.png" alt="Logo El Massa" class="h-8 sm:h-9 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="hidden items-center gap-1.5 font-bold text-base sm:text-lg text-[#3b2216]">
+          <i data-lucide="compass" class="w-5 h-5 text-[#d83b7d] stroke-[2]"></i> EL MASSA
         </div>
+        <span class="hidden sm:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#fff0f5] text-[#d83b7d] border border-[#fce7f3]">
+          Portal Itinerary
+        </span>
       </a>
 
-      <!-- Right: Utility Links -->
-      <div class="flex items-center gap-2 sm:gap-4 text-xs font-semibold text-[#765039]">
-        <a href="#katalog-section" class="hidden md:inline-block hover:text-[#d83b7d] transition-colors">Jadwal Paket</a>
-        <a href="paket-detail.html?id=umrah-special-november#section-checklist" class="hidden md:inline-block hover:text-[#d83b7d] transition-colors">Checklist Jamaah</a>
+      <!-- Center & Right: Navigation Links -->
+      <nav class="hidden md:flex items-center gap-5 text-xs font-bold text-[#765039]">
+        <a href="#itinerary-list-section" class="hover:text-[#d83b7d] transition-colors flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>Daftar Jadwal</span>
+        </a>
+        <a href="#alur-perjalanan-section" class="hover:text-[#d83b7d] transition-colors flex items-center gap-1.5">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>Alur Perjalanan</span>
+        </a>
+        <a href="#tabel-jadwal-section" class="hover:text-[#d83b7d] transition-colors flex items-center gap-1.5">
+          <i data-lucide="table" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>Tabel Ikhtisar</span>
+        </a>
+        <a href="https://elmassa-katalog.vercel.app" target="_blank" class="hover:text-[#d83b7d] transition-colors flex items-center gap-1 text-[#d83b7d] bg-[#fff0f5] px-3 py-1 rounded-full border border-[#fce7f3]">
+          <span>Buka Katalog Digital</span>
+          <i data-lucide="external-link" class="w-3 h-3 stroke-[2]"></i>
+        </a>
+      </nav>
 
-        <!-- Wishlist / WA Action -->
-        <button class="btn-share-wa px-3 sm:px-4 py-1.5 rounded-full bg-[#d83b7d] active:bg-[#c22c6c] hover:bg-[#c22c6c] text-white text-xs font-bold transition-all flex items-center gap-1.5">
-          <i data-lucide="message-circle" class="w-3.5 h-3.5 stroke-[2]"></i> <span class="hidden sm:inline">Chat</span> CS
+      <!-- Right: Action Button -->
+      <div class="flex items-center gap-2">
+        <button class="btn-share-wa px-3.5 sm:px-4 py-2 rounded-full bg-[#d83b7d] hover:bg-[#c22c6c] text-white text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 stroke-[2]"></i>
+          <span>Konsultasi WA</span>
         </button>
       </div>
 
@@ -86,87 +97,68 @@
   </header>
 
   <!-- ========================================================================= -->
-  <!-- CATEGORY & SEARCH PILL BAR -->
+  <!-- HERO BANNER: DAFTAR ITINERARY PERJALANAN UMRAH -->
   <!-- ========================================================================= -->
-  <div class="bg-white border-b border-[#f3e8ee] py-2.5 sm:py-3.5 sticky top-16 sm:top-[72px] z-30">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 -mx-1 px-1">
-        
-        <!-- Search Bar Input -->
-        <div class="relative flex-shrink-0 w-44 sm:w-64">
-          <input type="text" id="itinerary-search" placeholder="Cari paket, kota, maskapai..." class="w-full pl-3.5 sm:pl-4 pr-9 py-1.5 sm:py-2 rounded-full bg-[#faf7f5] border border-[#f0e8eb] text-xs text-[#3b2216] placeholder:text-slate-400 focus:outline-none focus:border-[#d83b7d] focus:bg-white transition-all">
-          <i data-lucide="search" class="w-3.5 h-3.5 text-[#d83b7d] absolute right-3 top-2.5 stroke-[2]"></i>
-        </div>
-
-        <!-- Filter Category Tabs -->
-        <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-xs font-bold flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="layers" class="w-3.5 h-3.5 stroke-[2]"></i>
-          <span>Semua Paket</span>
-        </button>
-        <button data-filter="direct" class="filter-btn px-4 py-2 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="plane" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
-          <span>Direct Flight</span>
-        </button>
-        <button data-filter="ustadz" class="filter-btn px-4 py-2 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="star" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
-          <span>Spesial Ustadz</span>
-        </button>
-        <button data-filter="akhir-tahun" class="filter-btn px-4 py-2 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="snowflake" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
-          <span>Akhir Tahun</span>
-        </button>
-        <button data-filter="syawal" class="filter-btn px-4 py-2 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="moon" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
-          <span>Ramadan & Syawal</span>
-        </button>
-        <button data-filter="liburan" class="filter-btn px-4 py-2 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
-          <span>Liburan Sekolah</span>
-        </button>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================= -->
-  <!-- HERO BANNER SECTION (PURE TEXT & EDITORIAL ITINERARY SHOWCASE) -->
-  <!-- ========================================================================= -->
-  <section class="py-8 sm:py-14 bg-white border-b border-[#f3e8ee]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-6">
+  <section class="relative bg-gradient-to-b from-[#fff7f9] to-[#fdfaf8] border-b border-[#f3e8ee] py-10 sm:py-14">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-5">
       
-      <div class="text-xs font-bold text-[#d83b7d] tracking-wider uppercase">
-        PORTAL ITINERARY RESMI · EL MASSA TOUR &amp; TRAVEL
+      <!-- Top Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#fce7f3] text-[11px] font-bold text-[#d83b7d] shadow-sm">
+        <i data-lucide="compass" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+        <span>PORTAL RESMI ITINERARY PERJALANAN UMRAH · 1448 H</span>
       </div>
 
-      <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#3b2216] tracking-tight leading-tight">
-        Rangkaian Jadwal &amp; Itinerary Perjalanan Umrah 1448 H
+      <!-- Main Headline -->
+      <h1 class="text-2xl sm:text-4xl md:text-5xl font-black text-[#3b2216] tracking-tight leading-tight">
+        Daftar Rangkaian Itinerary &amp; Jadwal Safar Umrah
       </h1>
 
-      <p class="text-xs sm:text-base text-[#765039] leading-relaxed max-w-2xl mx-auto">
-        Akses rincian jadwal ibadah hari demi hari, rute penerbangan langsung (*Jakarta &amp; Pangkal Pinang*), akomodasi hotel bintang 5 dekat pelataran Masjidil Haram &amp; Nabawi, serta panduan lengkap selama berada di Tanah Suci.
+      <!-- Description -->
+      <p class="text-xs sm:text-base text-[#765039] leading-relaxed max-w-3xl mx-auto">
+        Akses rincian jadwal ibadah hari demi hari, rute penerbangan, akomodasi hotel bintang 5 dekat pelataran Masjidil Haram &amp; Nabawi, jadwal masuk Raudhah, serta bonus City Tour Thaif untuk setiap paket keberangkatan resmi El Massa.
       </p>
 
-      <!-- Clean 4-Column Text Specifications -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2 text-left">
+      <!-- 4 Core Standard Specs -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 pt-3 text-left">
         
-        <div class="p-3.5 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] space-y-1">
-          <div class="text-[11px] font-semibold text-slate-400">Pilihan Durasi</div>
-          <div class="text-xs sm:text-sm font-bold text-[#3b2216]">9, 10, &amp; 12 Hari</div>
+        <div class="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#f0e8eb] shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-xl bg-[#fff0f5] text-[#d83b7d] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="plane" class="w-4 h-4 stroke-[2]"></i>
+          </div>
+          <div>
+            <div class="text-[11px] font-semibold text-slate-400">Maskapai Resmi</div>
+            <div class="text-xs sm:text-sm font-bold text-[#3b2216]">Saudia &amp; Garuda</div>
+          </div>
         </div>
 
-        <div class="p-3.5 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] space-y-1">
-          <div class="text-[11px] font-semibold text-slate-400">Titik Berangkat</div>
-          <div class="text-xs sm:text-sm font-bold text-[#3b2216]">PGK &amp; Jakarta</div>
+        <div class="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#f0e8eb] shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-xl bg-[#fff0f5] text-[#d83b7d] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="hotel" class="w-4 h-4 stroke-[2]"></i>
+          </div>
+          <div>
+            <div class="text-[11px] font-semibold text-slate-400">Akomodasi</div>
+            <div class="text-xs sm:text-sm font-bold text-[#3b2216]">Hotel ★5 Dekat Haram</div>
+          </div>
         </div>
 
-        <div class="p-3.5 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] space-y-1">
-          <div class="text-[11px] font-semibold text-slate-400">Akomodasi</div>
-          <div class="text-xs sm:text-sm font-bold text-[#3b2216]">Hotel ★5 Dekat Masjid</div>
+        <div class="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#f0e8eb] shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-xl bg-[#fff0f5] text-[#d83b7d] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="sparkles" class="w-4 h-4 stroke-[2]"></i>
+          </div>
+          <div>
+            <div class="text-[11px] font-semibold text-slate-400">Ziarah &amp; Ibadah</div>
+            <div class="text-xs sm:text-sm font-bold text-[#3b2216]">Tasreh Raudhah &amp; Thaif</div>
+          </div>
         </div>
 
-        <div class="p-3.5 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] space-y-1">
-          <div class="text-[11px] font-semibold text-slate-400">Bimbingan</div>
-          <div class="text-xs sm:text-sm font-bold text-[#3b2216]">Sesuai Sunnah</div>
+        <div class="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#f0e8eb] shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-xl bg-[#fff0f5] text-[#d83b7d] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="map-pin" class="w-4 h-4 stroke-[2]"></i>
+          </div>
+          <div>
+            <div class="text-[11px] font-semibold text-slate-400">Titik Kumpul</div>
+            <div class="text-xs sm:text-sm font-bold text-[#3b2216]">Pangkal Pinang &amp; CGK</div>
+          </div>
         </div>
 
       </div>
@@ -175,24 +167,210 @@
   </section>
 
   <!-- ========================================================================= -->
-  <!-- MAIN PACKAGES CATALOG CARDS -->
+  <!-- SACRED JOURNEY FLOW PIPELINE (ALUR RUTE PERJALANAN STANDAR EL MASSA) -->
   <!-- ========================================================================= -->
-  <section id="katalog-section" class="py-8 sm:py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
-      
-      <!-- Section Title Header -->
-      <div class="mb-6 sm:mb-8">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#3b2216] tracking-tight">
-          Koleksi Paket Umrah & Jadwal Perjalanan
-        </h2>
-        <p class="text-xs sm:text-sm text-[#765039] mt-0.5">
-          Pilih salah satu paket di bawah untuk melihat rincian agenda harian, akomodasi hotel, dan panduan perjalanan.
+  <section id="alur-perjalanan-section" class="py-8 bg-white border-b border-[#f3e8ee]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5">
+        <div>
+          <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#d83b7d]">Alur Perjalanan Resmi</span>
+          <h2 class="text-lg sm:text-xl font-bold text-[#3b2216]">Tahapan Safar Suci Jamaah El Massa</h2>
+        </div>
+        <p class="text-xs text-[#765039] max-w-md">
+          Semua program dirancang terstruktur dan nyaman mulai dari tanah air hingga kembali ke kampung halaman.
         </p>
       </div>
 
-      <!-- 3-Column Responsive Cards Grid -->
-      <div id="packages-grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        <!-- Rendered dynamically by itinerary.js -->
+      <!-- 6-Step Horizontal Pipeline Stepper -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
+        
+        <div class="p-3 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] relative group hover:border-[#d83b7d] transition-colors">
+          <div class="flex items-center justify-between mb-2">
+            <span class="w-6 h-6 rounded-full bg-[#d83b7d] text-white font-bold text-[11px] flex items-center justify-center">1</span>
+            <i data-lucide="plane-takeoff" class="w-4 h-4 text-[#d83b7d]"></i>
+          </div>
+          <div class="font-bold text-[#3b2216] text-xs">Keberangkatan &amp; Transit</div>
+          <p class="text-[11px] text-[#765039] mt-0.5">PGK ➔ Jakarta, istirahat di hotel transit &amp; pemantapan manasik.</p>
+        </div>
+
+        <div class="p-3 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] relative group hover:border-[#d83b7d] transition-colors">
+          <div class="flex items-center justify-between mb-2">
+            <span class="w-6 h-6 rounded-full bg-[#d83b7d] text-white font-bold text-[11px] flex items-center justify-center">2</span>
+            <i data-lucide="moon" class="w-4 h-4 text-[#d83b7d]"></i>
+          </div>
+          <div class="font-bold text-[#3b2216] text-xs">Madinah &amp; Raudhah</div>
+          <p class="text-[11px] text-[#765039] mt-0.5">Hotel ★5 dekat Nabawi, masuk Raudhah Tasreh Nusuk &amp; Ziarah Quba.</p>
+        </div>
+
+        <div class="p-3 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] relative group hover:border-[#d83b7d] transition-colors">
+          <div class="flex items-center justify-between mb-2">
+            <span class="w-6 h-6 rounded-full bg-[#d83b7d] text-white font-bold text-[11px] flex items-center justify-center">3</span>
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#d83b7d]"></i>
+          </div>
+          <div class="font-bold text-[#3b2216] text-xs">Miqat di Bir Ali</div>
+          <p class="text-[11px] text-[#765039] mt-0.5">Mandi ihram di hotel, niat umrah di Masjid Bir Ali &amp; talbiyah ke Makkah.</p>
+        </div>
+
+        <div class="p-3 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] relative group hover:border-[#d83b7d] transition-colors">
+          <div class="flex items-center justify-between mb-2">
+            <span class="w-6 h-6 rounded-full bg-[#d83b7d] text-white font-bold text-[11px] flex items-center justify-center">4</span>
+            <i data-lucide="compass" class="w-4 h-4 text-[#d83b7d]"></i>
+          </div>
+          <div class="font-bold text-[#3b2216] text-xs">Ibadah Umrah di Makkah</div>
+          <p class="text-[11px] text-[#765039] mt-0.5">Thawaf, Sa'i, Tahallul di Masjidil Haram dibimbing Muthawwif mukim.</p>
+        </div>
+
+        <div class="p-3 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] relative group hover:border-[#d83b7d] transition-colors">
+          <div class="flex items-center justify-between mb-2">
+            <span class="w-6 h-6 rounded-full bg-[#d83b7d] text-white font-bold text-[11px] flex items-center justify-center">5</span>
+            <i data-lucide="mountain" class="w-4 h-4 text-[#d83b7d]"></i>
+          </div>
+          <div class="font-bold text-[#3b2216] text-xs">Free Tour Kota Thaif</div>
+          <p class="text-[11px] text-[#765039] mt-0.5">Bonus ziarah Masjid Ibnu Abbas, udara sejuk &amp; pabrik parfum mawar.</p>
+        </div>
+
+        <div class="p-3 rounded-2xl bg-[#faf7f5] border border-[#f0e8eb] relative group hover:border-[#d83b7d] transition-colors">
+          <div class="flex items-center justify-between mb-2">
+            <span class="w-6 h-6 rounded-full bg-[#d83b7d] text-white font-bold text-[11px] flex items-center justify-center">6</span>
+            <i data-lucide="plane-landing" class="w-4 h-4 text-[#d83b7d]"></i>
+          </div>
+          <div class="font-bold text-[#3b2216] text-xs">Wada' &amp; Kepulangan</div>
+          <p class="text-[11px] text-[#765039] mt-0.5">Thawaf Wada', Corniche Jeddah dinner, penerbangan pulang &amp; Zamzam 5L.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN FILTER, SEARCH & VIEW SWITCHER BAR -->
+  <!-- ========================================================================= -->
+  <div id="katalog-section" class="scroll-mt-24"></div>
+  <section id="itinerary-list-section" class="py-6 sm:py-8 sticky top-16 sm:top-[72px] z-30 bg-white/95 backdrop-blur-md border-b border-[#f3e8ee]">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-3">
+      
+      <!-- Top Row: Search & View Mode Switcher -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+        
+        <!-- Live Search Input -->
+        <div class="relative flex-1 max-w-md">
+          <input type="text" id="itinerary-search" placeholder="Cari ustadz, bulan (Nov/Des/Jan/Feb/Mar/Jun), kota, maskapai..." class="w-full pl-9 pr-4 py-2 rounded-full bg-[#faf7f5] border border-[#f0e8eb] text-xs text-[#3b2216] placeholder:text-slate-400 focus:outline-none focus:border-[#d83b7d] focus:bg-white transition-all shadow-inner">
+          <i data-lucide="search" class="w-4 h-4 text-[#d83b7d] absolute left-3 top-2.5 stroke-[2]"></i>
+        </div>
+
+        <!-- View Mode Switcher Buttons -->
+        <div class="flex items-center gap-1.5 self-end sm:self-auto bg-[#faf7f5] p-1 rounded-full border border-[#f0e8eb]">
+          <button id="view-mode-list" class="view-mode-btn active px-3.5 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 text-[#3b2216]">
+            <i data-lucide="list" class="w-3.5 h-3.5 stroke-[2]"></i>
+            <span>Mode Daftar Itinerary</span>
+          </button>
+          <button id="view-mode-grid" class="view-mode-btn px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 text-[#765039] hover:text-[#3b2216]">
+            <i data-lucide="grid" class="w-3.5 h-3.5 stroke-[2]"></i>
+            <span>Mode Kartu Visual</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Row: Filter Category Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 -mx-1 px-1">
+        <button data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-full text-xs font-bold flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1">
+          <i data-lucide="layers" class="w-3.5 h-3.5 stroke-[2]"></i>
+          <span>Semua Jadwal (11 Paket)</span>
+        </button>
+        <button data-filter="ustadz" class="filter-btn px-3.5 py-1.5 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1">
+          <i data-lucide="star" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>Spesial Ustadz</span>
+        </button>
+        <button data-filter="november" class="filter-btn px-3.5 py-1.5 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>November 2026</span>
+        </button>
+        <button data-filter="akhir-tahun" class="filter-btn px-3.5 py-1.5 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1">
+          <i data-lucide="snowflake" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>Akhir Tahun (Des 2026)</span>
+        </button>
+        <button data-filter="syaban" class="filter-btn px-3.5 py-1.5 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1">
+          <i data-lucide="moon" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>Nisfu Sya'ban 2027</span>
+        </button>
+        <button data-filter="ramadan-syawal" class="filter-btn px-3.5 py-1.5 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>Ramadan &amp; Syawal 2027</span>
+        </button>
+        <button data-filter="liburan" class="filter-btn px-3.5 py-1.5 rounded-full bg-white border border-[#f0e8eb] text-xs font-semibold text-[#3b2216] hover:border-[#d83b7d] flex-shrink-0 transition-all whitespace-nowrap flex items-center gap-1">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-[#d83b7d] stroke-[2]"></i>
+          <span>Liburan Sekolah &amp; Muharram</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- DYNAMIC ITINERARY PACKAGES CONTAINER -->
+  <!-- ========================================================================= -->
+  <main class="py-8 sm:py-12 bg-[#fdfaf8]">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
+      
+      <!-- Section Info -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-[#3b2216] tracking-tight">
+            Rangkaian Itinerary Perjalanan Resmi
+          </h2>
+          <p class="text-xs sm:text-sm text-[#765039] mt-0.5">
+            Klik tombol <span class="font-bold text-[#d83b7d]">"Buka Detail Itinerary"</span> pada paket yang Anda minati untuk membaca rundown hari demi hari secara lengkap.
+          </p>
+        </div>
+        <div id="itinerary-count-badge" class="text-xs font-bold text-[#765039] bg-white px-3 py-1.5 rounded-full border border-[#f0e8eb] self-start sm:self-auto">
+          Menampilkan 11 Jadwal
+        </div>
+      </div>
+
+      <!-- Container where JavaScript renders either List or Grid view -->
+      <div id="packages-grid-container" class="space-y-4 sm:space-y-5">
+        <!-- Rendered by itinerary.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- ITINERARY SCHEDULE MATRIX / TABEL IKHTISAR JADWAL -->
+  <!-- ========================================================================= -->
+  <section id="tabel-jadwal-section" class="py-12 sm:py-16 bg-white border-t border-[#f3e8ee]">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-2">
+        <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#d83b7d] bg-[#fff0f5] px-3 py-1 rounded-full border border-[#fce7f3]">
+          Ikhtisar Jadwal Cepat
+        </span>
+        <h3 class="text-xl sm:text-3xl font-extrabold text-[#3b2216]">
+          Tabel Ringkasan Seluruh Jadwal Keberangkatan Umrah
+        </h3>
+        <p class="text-xs sm:text-sm text-[#765039]">
+          Perbandingan ringkas tanggal, durasi, maskapai penerbangan, dan link akses langsung ke dokumen itinerary masing-masing paket.
+        </p>
+      </div>
+
+      <!-- Responsive Schedule Table -->
+      <div class="overflow-x-auto rounded-2xl border border-[#f0e8eb] shadow-sm">
+        <table class="w-full text-left text-xs border-collapse bg-white min-w-[700px]">
+          <thead>
+            <tr class="bg-[#faf7f5] border-b border-[#f0e8eb] text-[#3b2216] font-bold">
+              <th class="py-3.5 px-4">Program Umrah</th>
+              <th class="py-3.5 px-4">Tanggal Keberangkatan</th>
+              <th class="py-3.5 px-4">Durasi</th>
+              <th class="py-3.5 px-4">Maskapai &amp; Rute</th>
+              <th class="py-3.5 px-4">Hotel Makkah / Madinah</th>
+              <th class="py-3.5 px-4 text-center">Aksi Link</th>
+            </tr>
+          </thead>
+          <tbody id="itinerary-table-body" class="divide-y divide-[#f3e8ee] text-[#4a2e22]">
+            <!-- Rendered dynamically by itinerary.js -->
+          </tbody>
+        </table>
       </div>
 
     </div>
@@ -202,20 +380,27 @@
   <!-- FOOTER -->
   <!-- ========================================================================= -->
   <footer class="bg-[#2a160d] text-slate-400 py-10 sm:py-12 border-t border-[#3d2015]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs space-y-2.5 sm:space-y-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs space-y-3">
       <div class="text-sm font-bold text-white tracking-wide flex items-center justify-center gap-1.5">
-        <i data-lucide="compass" class="w-4 h-4 text-[#d83b7d] stroke-[2]"></i> EL MASSA TOUR & TRAVEL
+        <i data-lucide="compass" class="w-4 h-4 text-[#d83b7d] stroke-[2]"></i> EL MASSA TOUR &amp; TRAVEL
       </div>
       <p class="max-w-md mx-auto text-slate-300 text-xs">
-        Izin Resmi PPIU Kementerian Agama RI · Melayani Jamaah Umrah & Haji Khusus Sesuai Sunnah
+        Izin Resmi PPIU Kementerian Agama RI · Melayani Jamaah Umrah &amp; Haji Khusus Sesuai Sunnah
       </p>
+      <div class="flex items-center justify-center gap-4 text-xs font-semibold text-slate-400 pt-2">
+        <a href="https://elmassa-katalog.vercel.app" target="_blank" class="hover:text-white transition-colors">Katalog Digital</a>
+        <span>·</span>
+        <a href="#itinerary-list-section" class="hover:text-white transition-colors">Daftar Itinerary</a>
+        <span>·</span>
+        <a href="https://wa.me/6281171715125" target="_blank" class="hover:text-white transition-colors">Customer Service</a>
+      </div>
       <div class="text-[11px] text-slate-500 pt-3 border-t border-[#3d2015]">
-        © 2026 El Massa Umrah. Hak Cipta Dilindungi.
+        © 2026 - 2027 El Massa Umrah. Hak Cipta Dilindungi.
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP PILL -->
+  <!-- FLOATING WHATSAPP BUTTON -->
   <div class="fixed bottom-5 right-5 z-40">
     <button class="btn-share-wa flex items-center gap-2 px-4 py-3 rounded-full bg-[#25D366] active:bg-[#20bd5a] hover:bg-[#20bd5a] text-white font-bold text-xs sm:text-sm shadow-xl hover:scale-105 transition-all">
       <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 stroke-[2]"></i>
