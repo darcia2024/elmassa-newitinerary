@@ -184,6 +184,7 @@ function create11DaySyawalItinerary(ustadzName) {
   return [
     {
       day: 1,
+      date: "16 Maret 2027",
       city: "Pangkal Pinang ➔ Jakarta (Transit D'Prima Hotel)",
       title: "Keberangkatan Menuju Jakarta & Pemantapan Manasik di Hotel Transit",
       agenda: [
@@ -198,6 +199,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 2,
+      date: "17 Maret 2027",
       city: "Jakarta ➔ Jeddah / Madinah (Saudia SV821)",
       title: "Penerbangan Menuju Tanah Suci & Check-in Hotel Madinah",
       agenda: [
@@ -211,6 +213,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 3,
+      date: "18 Maret 2027",
       city: "Madinah Munawwarah (Raudhah & Ziarah)",
       title: "Masuk Raudhah Sesuai Tasreh Nusuk & Ziarah Sekitar Masjid Nabawi",
       agenda: [
@@ -224,6 +227,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 4,
+      date: "19 Maret 2027",
       city: "Madinah Munawwarah (Ziarah Sejarah)",
       title: "Tour & Ziarah Jejak Sejarah Islam Kota Madinah",
       agenda: [
@@ -237,6 +241,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 5,
+      date: "20 Maret 2027",
       city: "Madinah Munawwarah",
       title: "Memperbanyak Ibadah di Masjid Nabawi & Pemantapan Manasik",
       agenda: [
@@ -249,6 +254,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 6,
+      date: "21 Maret 2027",
       city: "Madinah ➔ Miqat Bir Ali ➔ Makkah",
       title: "Check-out Madinah, Miqat di Bir Ali & Pelaksanaan Umrah Pertama",
       agenda: [
@@ -263,6 +269,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 7,
+      date: "22 Maret 2027",
       city: "Makkah Mukarramah",
       title: "Ibadah Mandiri & Shalat Jumat di Masjidil Haram",
       agenda: [
@@ -276,6 +283,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 8,
+      date: "23 Maret 2027",
       city: "Makkah Mukarramah (Ziarah & Miqat Ji'ranah)",
       title: "Tour Jejak Sejarah Kota Makkah & Miqat Umrah ke-2 (Opsional)",
       agenda: [
@@ -289,6 +297,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 9,
+      date: "24 Maret 2027",
       city: "Makkah ➔ Thaif ➔ Makkah",
       title: "Bonus City Tour Thaif Gratis dari El Massa & Miqat Umrah ke-3",
       agenda: [
@@ -302,6 +311,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 10,
+      date: "25 - 26 Maret 2027",
       city: "Makkah ➔ Thawaf Wada' ➔ City Tour Jeddah ➔ Bandara (SV818)",
       title: "Thawaf Wada' (Perpisahan), City Tour Corniche Jeddah & Penerbangan",
       agenda: [
@@ -309,7 +319,7 @@ function create11DaySyawalItinerary(ustadzName) {
         { time: "12:00 LT", title: "Makan Siang & Check-out Hotel Makkah", desc: "Makan siang dan meletakkan koper di depan kamar masing-masing. Jamaah akan check-out setelah shalat Ashar." },
         { time: "Sore", title: "City Tour Kota Jeddah & Corniche", desc: "Dilanjutkan City Tour kota Jeddah (Masjid Terapung Laut Merah dan pusat belanja)." },
         { time: "22:00 LT", title: "Makan Malam di Corniche Jeddah Hotel", desc: "Makan malam di Corniche Jeddah Hotel pukul 22.00 LT. Setelah selesai makan malam melanjutkan perjalanan ke Bandara Jeddah." },
-        { time: "02:20 LT", title: "Take-off Penerbangan SV818 ke Jakarta", desc: "Pesawat ke Jakarta take-off dari Jeddah pada pukul 02.20 LT (SV818 Saudia Airlines) dan akan tiba di Jakarta pada jam 16.00 WIB tanggal 05 April 2027. Check-in dan istirahat di hotel transit Jakarta." }
+        { time: "02:20 LT", title: "Take-off Penerbangan SV818 ke Jakarta", desc: "Pesawat ke Jakarta take-off dari Jeddah pada pukul 02.20 LT (SV818 Saudia Airlines) dan akan tiba di Jakarta pada jam 16.00 WIB tanggal 26 Maret 2027. Check-in dan istirahat di hotel transit Jakarta." }
       ],
       highlight: "Thawaf Wada' penuh kenangan indah di Ka'bah dan santap malam di Corniche Jeddah.",
       sunnahAmalan: "Menatap Ka'bah dengan penuh doa dan harapan agar diundang kembali ke Tanah Suci.",
@@ -317,6 +327,7 @@ function create11DaySyawalItinerary(ustadzName) {
     },
     {
       day: 11,
+      date: "27 Maret 2027",
       city: "Jakarta (CGK) ➔ Pangkal Pinang (PGK) Garuda GA136",
       title: "Penerbangan Garuda Indonesia ke Pangkal Pinang & Kepulangan",
       agenda: [
@@ -419,9 +430,9 @@ const ALL_PACKAGES = {
     poster: "assets/images/poster-muhammad-kurnia.png",
     hasFlyer: true,
     isLocked: false,
-    duration: "11 Hari (26 Mar - 05 Apr 2027)",
-    departureDate: "26 Maret 2027",
-    returnDate: "05 April 2027",
+    duration: "11 Hari (16 - 27 Mar 2027)",
+    departureDate: "16 Maret 2027",
+    returnDate: "27 Maret 2027",
     airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
     flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
     departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
@@ -444,9 +455,9 @@ const ALL_PACKAGES = {
     poster: "assets/images/poster-sayang-orang-tua.png",
     hasFlyer: true,
     isLocked: false,
-    duration: "11 Hari (26 Mar - 05 Apr 2027)",
-    departureDate: "26 Maret 2027",
-    returnDate: "05 April 2027",
+    duration: "11 Hari (16 - 27 Mar 2027)",
+    departureDate: "16 Maret 2027",
+    returnDate: "27 Maret 2027",
     airline: "Saudia Airlines (SV821/SV818) & Garuda (GA136)",
     flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
     departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
