@@ -60,9 +60,9 @@ const PACKAGES_DATA = [
     bonus: "Free City Tour Thaif + D'Prima Hotel Transit PP + Air Zamzam 5L"
   },
   {
-    id: "kurnia",
-    slug: "kurnia",
-    url: "paket-kurnia",
+    id: "ustadkurnia",
+    slug: "ustadkurnia",
+    url: "paket-ustadkurnia",
     title: "Umrah Special Bersama Ust. Dr. H. Muhammad Kurnia, Lc., M.Ag.",
     shortTitle: "Umrah Ust. Dr. Muhammad Kurnia",
     category: "ustadz",

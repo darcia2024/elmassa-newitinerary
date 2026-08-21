@@ -8,6 +8,8 @@
     { "source": "/paket-akhir-tahun", "destination": "/paket-detail.html?slug=akhir-tahun" },
     { "source": "/paket-akhirtahun", "destination": "/paket-detail.html?slug=akhir-tahun" },
     { "source": "/paket-desember", "destination": "/paket-detail.html?slug=akhir-tahun" },
+    { "source": "/paket-ustadkurnia", "destination": "/paket-detail.html?slug=kurnia" },
+    { "source": "/paket-ustad-kurnia", "destination": "/paket-detail.html?slug=kurnia" },
     { "source": "/paket-kurnia", "destination": "/paket-detail.html?slug=kurnia" },
     { "source": "/paket-muhammad-kurnia", "destination": "/paket-detail.html?slug=kurnia" },
     { "source": "/paket-orang-tua", "destination": "/paket-detail.html?slug=orang-tua" },
