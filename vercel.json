@@ -14,6 +14,12 @@
     { "source": "/paket-muhammad-kurnia", "destination": "/paket-detail.html?slug=kurnia" },
     { "source": "/paket-orang-tua", "destination": "/paket-detail.html?slug=orang-tua" },
     { "source": "/paket-sayang-orang-tua", "destination": "/paket-detail.html?slug=orang-tua" },
+    { "source": "/paket-nisfu-syaban", "destination": "/paket-detail.html?slug=nisfu-syaban" },
+    { "source": "/paket-ramadan", "destination": "/paket-detail.html?slug=ramadan" },
+    { "source": "/paket-syawal", "destination": "/paket-detail.html?slug=syawal" },
+    { "source": "/paket-muharram", "destination": "/paket-detail.html?slug=muharram" },
+    { "source": "/paket-liburan-9h", "destination": "/paket-detail.html?slug=liburan-9h" },
+    { "source": "/paket-liburan-12h", "destination": "/paket-detail.html?slug=liburan-12h" },
     { "source": "/paket-:slug", "destination": "/paket-detail.html?slug=:slug" },
     { "source": "/paket/:slug", "destination": "/paket-detail.html?slug=:slug" }
   ]
