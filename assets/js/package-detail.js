@@ -705,29 +705,29 @@ const ALL_PACKAGES = {
     itineraryDays: createTailoredItinerary("Umrah Ust. Hanan Attaki", 10, 3, 4, "Saudia Airlines (Landing Madinah)", true, "Kajian Khusus Tematik Bersama Ustadz Hanan Attaki di Madinah & Makkah.")
   },
 
-  // 3. UMRAH NYAMAN AKHIR TAHUN
+  // 3. UMRAH AKHIR TAHUN SPECIAL LANDING MADINAH (11 HARI)
   "akhir-tahun": {
     id: "akhir-tahun",
     slug: "akhir-tahun",
-    title: "Umrah Nyaman Akhir Tahun (Program 9 Hari)",
-    shortTitle: "Umrah Nyaman Akhir Tahun",
+    title: "Umrah Akhir Tahun! Special Landing Madinah (11 Hari)",
+    shortTitle: "Umrah Akhir Tahun",
     category: "akhir-tahun",
-    badge: "Akhir Tahun",
-    poster: "assets/images/poster-desember-akhir-tahun.jpg",
+    badge: "Landing Madinah",
+    poster: "assets/images/poster-desember-akhir-tahun.png",
     hasFlyer: true,
     isLocked: false,
-    duration: "9 Hari (14 - 22 Des 2026)",
-    departureDate: "14 Desember 2026",
-    returnDate: "22 Desember 2026",
-    airline: "Saudia Airlines Direct",
-    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Jeddah/Madinah | Jeddah ➔ Jakarta ➔ Pangkal Pinang",
+    duration: "11 Hari (12 - 23 Des 2026)",
+    departureDate: "12 Desember 2026",
+    returnDate: "23 Desember 2026",
+    airline: "Saudia Airlines (Landing Madinah)",
+    flightRoute: "Pangkal Pinang (PGK) ➔ Jakarta (CGK) ➔ Madinah (MED) | Jeddah (JED) ➔ Jakarta ➔ Pangkal Pinang",
     departureCity: "Pangkal Pinang (Bandara Depati Amir) & Jakarta (CGK)",
     hotelMadinah: "Daar El Naeem (★5, 50m ke Nabawi)",
-    hotelMakkah: "Sawaed Al Khaer (Pilihan Upgrade Bintang 5: Makkah Tower Hotel)",
-    seatsAvailable: 36,
+    hotelMakkah: "Sawaed Al Khaer (Pilihan Upgrade ★5: Sofwah / Zamzam Tower)",
+    seatsAvailable: 15,
     leadUstadz: "Dewan Pembimbing Ibadah Senior El Massa & Muthawwif Mukim",
-    bonus: "Bonus City Tour Thaif Gratis dari El Massa + D'Prima Hotel Transit PP + Air Zamzam 5L",
-    itineraryDays: createTailoredItinerary("Umrah Nyaman Akhir Tahun", 9, 3, 3, "Saudia Airlines Direct", true, "Kajian muhasabah dan tausiyah akhir tahun di Masjid Nabawi.")
+    bonus: "Free City Tour Thaif & Pabrik Parfum + D'Prima Hotel Transit PP + Air Zamzam 5L",
+    itineraryDays: createTailoredItinerary("Umrah Akhir Tahun", 11, 4, 4, "Saudia Airlines (Landing Madinah)", true, "Kajian muhasabah akhir tahun dan tadabbur di Masjid Nabawi & Masjidil Haram.")
   },
 
   // 4. UMRAH SPECIAL BERSAMA USTADZ DR. H. MUHAMMAD KURNIA
